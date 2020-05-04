@@ -7,11 +7,16 @@
     overflow-y: hidden;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+
 
 /* ---------------------------------------- PARTIE CHIFFRES ----------------------------------------------*/
 
 body{
-    width: 2800px;
+    width: 4200px;
 }
 
 /* PARTIE 1 */
@@ -160,4 +165,104 @@ body{
     height: 210px;
     width: 400px;
 }
+
+/* ---------------------------------------- PARTIE CREDITS ----------------------------------------------*/
+
+.credits{
+    position: absolute;
+    top: 0;
+    left: 2800px;
+    height: 100vh;
+    width: 100vw;
+    background-color: #0C0C0C;
+}
+
+.cred-title{
+    height: 100vh;
+    display:flex;
+    align-items:center;
+    cursor: default;
+}
+
+.cred-title-h{
+    font-family: 'Bellota Text', cursive;
+    font-size: 130px;
+    color: white;
+    writing-mode: vertical-lr;
+    transform:rotate(-180deg);
+    text-shadow: 0.1em -0.05em rgba(255, 255, 255, 0.3);
+}
+
+.cred-box{
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    height: 200px;
+    width: 350px;
+    background-color: #580302;
+    box-shadow: -10px -10px #AA151B;
+}
+
+.cred-box-content{
+    font-family: 'Bellota Text', cursive;
+    color: white;
+    font-size: 17px;
+    padding: 20px 20px;
+}
+
+.cred-link{
+    position: absolute;
+    bottom: 10%;
+    left: 25%;
+    width: 850px;
+    height: 300px;
+    font-family: 'Bellota Text', cursive;
+    color: white;
+}
+
+.cred-link-title{
+    text-align: center;
+    font-size: 35px;
+}
+
+.cred-link-dev{
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10%;
+}
+
+.cred-link-href{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
+
+.cred-link-name{
+    font-size: 25px;
+}
+
+
+.cred-link-trait-one{
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    height: 150px;
+    width: 2px;
+    background-color: #C5171B;
+}
+
+.cred-link-trait-two{
+    position: absolute;
+    top: 30%;
+    left: 67%;
+    height: 150px;
+    width: 2px;
+    background-color: #C5171B;
+}
+
+
+
+
 

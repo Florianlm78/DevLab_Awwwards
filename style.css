@@ -24,7 +24,7 @@ body{
 .num-partOne{
     height: 100vh;
     width: 900px;
-    background-image: url(photo/galerie/escalier.png);
+    background-image: url(assets/gallery/escalier.png);
     background-size: cover;
 }
 .num-title{
@@ -91,7 +91,7 @@ body{
     left: 1450px;
     height: 100vh;
     width: 100%;
-    background-image: url(photo/galerie/oiuepp7bbx9vnleozxtv.jpg);
+    background-image: url(assets/gallery/oiuepp7bbx9vnleozxtv.jpg);
     background-size: cover;
 }
 

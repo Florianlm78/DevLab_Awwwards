@@ -1,7 +1,82 @@
-*
-{
+
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+
+*{
     margin: 0;
     padding: 0;
-    overflow-y: 0;
+}
+
+.navbar-menu {
+    display: flex;
+    width: 100%;
+    position: fixed;
+}
+
+.navbar {
+    width: 3%;
+    height: 100vh;
+    display: block;
+    background-color: black;
+    padding: 10px;
+}
+
+.navbar h1 {
+    transform: rotate(-90deg);
+    /* margin-top: 44vh; */
+    position: absolute;
+    top: 50vh;
+    left: -3.8vw;
+    /* width: calc(79.30556vh - 3.30729vw); */
+    color: #C89C12;
+    /* text-transform: uppercase; */
+
+}
+
+.burger-menu-btn {
+    background: none;
+    border: none;
+    text-align: center;
+    outline: none;
+}
+
+.burger-menu-btn span {
+  background : #C89C12;
+  width: 30px;
+  height: 3px;
+  display: block;
+  margin-bottom: 5px;
+  
+}
+
+.menu {
+    width: 95%;
+    height: 100vh;
+    background-color: teal;
+    display: none;
+    
+}
+
+.menu-li {
+    color: #C89C12;
+    font-size: 6rem;
+    list-style: none;
+    text-transform: uppercase;
+    font-family: 'Bellota Text', cursive;
+    font-weight: 900;
+}
+
+.menu-content {
+    margin: 40px;
+}
+
+.burger-menu-btn.open {
+    animation: rotate 1s;
+    transform: rotate(90deg);
+}
+
+@keyframes rotate {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(90deg);}
 }
 

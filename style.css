@@ -38,6 +38,8 @@
     border: none;
     text-align: center;
     outline: none;
+    animation-duration: 1s;
+    transition: all 0.3s ease-in-out;
 }
 
 .burger-menu-btn span {
@@ -64,6 +66,8 @@
     text-transform: uppercase;
     font-family: 'Bellota Text', cursive;
     font-weight: 900;
+    transform: translateY(15vh);
+    opacity: 0;
 }
 
 .menu-content {
@@ -71,12 +75,8 @@
 }
 
 .burger-menu-btn.open {
-    animation: rotate 1s;
+    /* animation: rotate 1s; */
     transform: rotate(90deg);
 }
 
-@keyframes rotate {
-    0%{transform: rotate(0deg);}
-    100%{transform: rotate(90deg);}
-}
 

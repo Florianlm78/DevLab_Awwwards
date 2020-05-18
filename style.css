@@ -11,7 +11,7 @@
 
 .navbar-menu {
     display: flex;
-    width: 100%;
+    /* width: 100%; */
     position: fixed;
     z-index: 10;
 }
@@ -31,6 +31,7 @@
     top: 50vh;
     left: -4.8vh;
     /* width: calc(79.30556vh - 3.30729vw); */
+    width: 150px;
     color: #C89C12;
     /* text-transform: uppercase; */
 

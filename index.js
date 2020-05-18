@@ -2,13 +2,13 @@
 
 var  menuModal = document.getElementById('menuModal'),
        burgerMenu = document.getElementById('burgerMenuBtn'),
+       navbarMenu = document.getElementById('navbarMenu'),
        menuTimeline = new TimelineMax({paused:true});
 
 menuTimeline.to('.menu', 0.5, {
-  width: "100%",        
+  width: "100vw",        
   ease: Expo.easeInOut
 })
-
 
 menuTimeline.to('#ml1', 0.2, {
   delay: "0",
@@ -41,10 +41,6 @@ menuTimeline.to('#ml4', 0.2, {
 })
 
 
-menuTimeline.to('.menu', 0.2, {
-  width: "100%",        
-  ease: Expo.easeInOut
-})
     
 
 burgerMenu.onclick = function() {

@@ -263,6 +263,126 @@ body{
 }
 
 
+.navbar-menu {
+    display: flex;
+    /* width: 100%; */
+    position: fixed;
+    z-index: 10;
+}
+
+.navbar {
+    width: 50px;
+    height: 100vh;
+    display: block;
+    /* background-color: black; */
+    padding: 10px;
+}
+
+.navbar h1 {
+    transform: rotate(-90deg);
+    /* margin-top: 44vh; */
+    position: absolute;
+    top: 50vh;
+    left: -4.8vh;
+    /* width: calc(79.30556vh - 3.30729vw); */
+    width: 150px;
+    color: #C89C12;
+    /* text-transform: uppercase; */
+
+}
+
+.burger-menu-btn {
+    background: none;
+    border: none;
+    text-align: center;
+    outline: none;
+    animation-duration: 1s;
+    transition: all 0.3s ease-in-out;
+    margin-left: 0.5vh;
+    /* background-color: red; */
+    
+}
+
+.burger-menu-btn span {
+  background : #C89C12;
+  width: 30px;
+  height: 3px;
+  display: block;
+  margin-bottom: 5px;
+  
+  
+}
+
+.menu {
+    width: 0%;
+    height: 100vh;
+    background-color: #000;
+    display: none;
+    
+}
+
+.menu-li {
+    color: #C89C12;
+    font-size: 8rem;
+    list-style: none;
+    text-transform: uppercase;
+    font-family: 'Bellota Text', cursive;
+    font-weight: 900;
+    transform: translateY(15vh);
+    opacity: 0;
+}
+
+
+.progress-bar {
+    background-color:  #C89C12;;
+    height: 100vh;
+    width: 3px;
+}
+
+.menu-content {
+    margin: 40px;
+    
+}
+
+.navbar {
+    background-color: #000;
+    
+}
+
+.burger-menu-btn.open {
+    transform: rotate(90deg);
+}
+
+.galery {
+    /* background-color:  #000; */
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+#draggableImg , #draggableImg2  {
+    position: absolute;
+    z-index: 1;
+    transform: translateX(100px);
+    text-align: center;
+  }
+
+  
+
+  #draggableImg img, #draggableImg2 img { 
+      width: 500px;
+      transition: ease(1s);
+  }
+
+  
+  #mydivheader {
+    padding: 1px;
+    cursor: move;
+    z-index: 10;
+  }
+
+  
+
 
 
 

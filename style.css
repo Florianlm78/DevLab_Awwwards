@@ -46,13 +46,14 @@ a{
     display: block;
     /* background-color: black; */
     padding: 10px;
+    opacity: 0.5;
 }
 
 .navbar h1 {
     transform: rotate(-90deg);
     /* margin-top: 44vh; */
     position: absolute;
-    top: 50vh;
+    top: 45vh;
     left: -4.8vh;
     /* width: calc(79.30556vh - 3.30729vw); */
     width: 150px;
@@ -119,7 +120,9 @@ a{
     background-color: #000;
 }
 
-.h1-navbar{
+#h1-navbar{
+    font-family: 'Bellota Text', cursive;
+    font-size: 25px;
     opacity: 1;
 }
 
@@ -261,7 +264,6 @@ a{
     display: flex;
     top: 0;
     left: 100vw;
-
     height: 100vh;
     width: 100vw;
     background-image: url(assets/gallery/escalier.png);

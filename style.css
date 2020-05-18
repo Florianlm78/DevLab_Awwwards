@@ -13,10 +13,11 @@ body {
     width: 100%;
 }
 
-a {
+a{
     text-decoration: none;
     color: white;
 }
+
 
 /* ########### SECTION HISTOIRE ########### */
 
@@ -126,4 +127,249 @@ a {
     color: #730402;
 }
 
+
+/* ---------------------------------------- PARTIE CHIFFRES ----------------------------------------------*/
+
+/* PARTIE 1 */
+
+.num-partOne{
+    height: 100vh;
+    width: 900px;
+    background-image: url(assets/gallery/escalier.png);
+    background-size: cover;
+}
+.num-title{
+    height: 100vh;
+    display:flex;
+    align-items:center;
+    cursor: default;
+}
+
+.num-title-h{
+    font-family: 'Bellota Text', cursive;
+    font-size: 130px;
+    color: white;
+    writing-mode: vertical-lr;
+    transform:rotate(-180deg);
+    text-shadow: 0.1em -0.1em rgba(255, 255, 255, 0.3);
+}
+
+
+
+/* PARTIE 2 */
+
+.num-partTwo{
+    height: 100vh;
+    
+}
+
+.num-square{
+    position: absolute;
+    top: 0px;
+    left: 650px;
+    height: 0;
+    width: 0;
+    border-top    : 50vh solid transparent;
+    border-bottom : 50vh solid transparent;
+    border-right  : 250px solid #730402;
+}
+
+.num-square-two{
+    z-index: 2;
+    position: absolute;
+    height: 100vh;
+    width: 250px;
+    top: 0;
+    left: 900px;
+    background-color: #730402;
+}
+
+.num-square-three{
+    z-index: 2;
+    position: absolute;
+    height: 100vh;
+    width: 600px;
+    top: 0;
+    left: 1150px;
+    background-color: #730402;
+
+}
+
+.num-square-img{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 1450px;
+    height: 100vh;
+    width: 100%;
+    background-image: url(assets/gallery/oiuepp7bbx9vnleozxtv.jpg);
+    background-size: cover;
+}
+
+
+/* PARTIE TEXTE */
+
+.num-visitor{
+    position: absolute;
+    font-family: 'Bellota Text', cursive;
+    line-height: 70px;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    top: 10%;
+    left: 20%;
+    height: 200px;
+    width: 400px;
+}
+
+.num-employees{
+    position: absolute;
+    font-family: 'Bellota Text', cursive;
+    line-height: 70px;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    bottom: 10%;
+    left: 20%;
+    height: 200px;
+    width: 400px;
+}
+
+.num-age{
+    z-index: 2;
+    position: absolute;
+    font-family: 'Bellota Text', cursive;
+    line-height: 70px;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    top: 35vh;
+    left: 60%;
+    height: 200px;
+    width: 400px;
+}
+
+.num-representation{
+    z-index: 2;
+    position: absolute;
+    font-family: 'Bellota Text', cursive;
+    line-height: 70px;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    top: 10%;
+    left: 100%;
+    height: 200px;
+    width: 400px;
+}
+
+.num-filling{
+    z-index: 2;
+    position: absolute;
+    font-family: 'Bellota Text', cursive;
+    line-height: 70px;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    bottom: 10%;
+    left: 100%;
+    height: 210px;
+    width: 400px;
+}
+
+/* ---------------------------------------- PARTIE CREDITS ----------------------------------------------*/
+
+.credits{
+    position: absolute;
+    top: 0;
+    left: 2800px;
+    height: 100vh;
+    width: 100vw;
+    background-color: #0C0C0C;
+}
+
+.cred-title{
+    height: 100vh;
+    display:flex;
+    align-items:center;
+    cursor: default;
+}
+
+.cred-title-h{
+    font-family: 'Bellota Text', cursive;
+    font-size: 130px;
+    color: white;
+    writing-mode: vertical-lr;
+    transform:rotate(-180deg);
+    text-shadow: 0.1em -0.05em rgba(255, 255, 255, 0.3);
+}
+
+.cred-box{
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    height: 200px;
+    width: 350px;
+    background-color: #580302;
+    box-shadow: -10px -10px #AA151B;
+}
+
+.cred-box-content{
+    font-family: 'Bellota Text', cursive;
+    color: white;
+    font-size: 17px;
+    padding: 20px 20px;
+}
+
+.cred-link{
+    position: absolute;
+    bottom: 10%;
+    left: 25%;
+    width: 850px;
+    height: 300px;
+    font-family: 'Bellota Text', cursive;
+    color: white;
+}
+
+.cred-link-title{
+    text-align: center;
+    font-size: 35px;
+}
+
+.cred-link-dev{
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10%;
+}
+
+.cred-link-href{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
+
+.cred-link-name{
+    font-size: 25px;
+}
+
+
+.cred-link-trait-one{
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    height: 150px;
+    width: 2px;
+    background-color: #C5171B;
+}
+
+.cred-link-trait-two{
+    position: absolute;
+    top: 30%;
+    left: 67%;
+    height: 150px;
+    width: 2px;
+    background-color: #C5171B;
+}
 

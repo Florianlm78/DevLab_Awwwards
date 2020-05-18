@@ -72,12 +72,12 @@ function RandomPosition(max) {
 }
 
 
-draggableImg.style.transform = "translateY(" + RandomPosition(10) + "vw) translateX(" + RandomPosition(100) + "vw)";
+draggableImg.style.transform = "translateY(" + RandomPosition(10) + "vw) translateX(" + RandomPosition(35) + "vw)";
 draggableImg2.style.transform = "translateY(" + RandomPosition(2) + "vw) translateX(" + RandomPosition(80) + "vw)";
-draggableImg3.style.transform = "translateY(" + RandomPosition(3) + "vw) translateX(" + RandomPosition(40) + "vw)";
-draggableImg4.style.transform = "translateY(" + RandomPosition(4) + "vw) translateX(" + RandomPosition(70) + "vw)";
+draggableImg3.style.transform = "translateY(" + RandomPosition(15) + "vw) translateX(" + RandomPosition(40) + "vw)";
+draggableImg4.style.transform = "translateY(" + RandomPosition(20) + "vw) translateX(" + RandomPosition(70) + "vw)";
 draggableImg5.style.transform = "translateY(" + RandomPosition(6) + "vw) translateX(" + RandomPosition(20) + "vw)";
-draggableImg6.style.transform = "translateY(" + RandomPosition(8) + "vw) translateX(" + RandomPosition(90) + "vw)";
+draggableImg6.style.transform = "translateY(" + RandomPosition(8) + "vw) translateX(" + RandomPosition(20) + "vw)";
 
 
 dragElement(document.getElementById("draggableImg"));
@@ -125,7 +125,40 @@ function dragElement(elmnt) {
 }
 
 
+let width = document.body.clientWidth
 
+const animation = () => {
+
+    let scroll = window.scrollX
+    let hauteurFenetre = window.innerHeight;
+    let pourcentage = scroll * 100 / (width - hauteurFenetre)
+
+    console.log(pourcentage)
+    console.log(window.scrollX)
+
+}
+
+// window.addEventListener("scroll", animation);
+
+
+window.onload = () => {
+  
+  window.addEventListener("scroll", () => {
+      
+      let scrollLargeur = document.documentElement.scrollWidth - window.innerWidth
+      
+      let position = window.scrollX
+      
+      let largeur = document.documentElement.clientWidth
+      
+      let barre = position / scrollLargeur * largeur
+
+      let barrePourcentage =  ( barre * 100 ) / largeur
+
+      console.log(barrePourcentage)
+      document.getElementById("progressBar").style.height = barrePourcentage +"vh"
+  })
+}
 
 /*
 var item = document.getElementsByTagName('BODY')[0];

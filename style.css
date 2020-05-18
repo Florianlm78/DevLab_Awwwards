@@ -296,10 +296,9 @@ a{
 /* ---------------------------------------- PARTIE CREDITS ----------------------------------------------*/
 
 .credits{
-    display: none;
     position: absolute;
     top: 0;
-    left: 2800px;
+    left: 1125vw;
     height: 100vh;
     width: 100vw;
     background-color: #0C0C0C;

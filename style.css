@@ -501,11 +501,11 @@ a{
     
 }
 
-.galery div  {
+.draggableImg  {
     position: absolute;
     z-index: 1;
     text-align: center;
-    left: 0vw;
+    left: 10vw;
     top: 3vh;
     /* top: 50vw; */
 

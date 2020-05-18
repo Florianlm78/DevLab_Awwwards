@@ -18,6 +18,18 @@ a{
     color: white;
 }
 
+/* ---------------------------------------- PARTIE HOME ----------------------------------------------*/
+
+.home{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(assets/bg/homepage-bg.JPG);
+    background-size: cover;
+}
+
 /* ---------------------------------------- PARTIE MENU ----------------------------------------------*/
 
 
@@ -393,10 +405,20 @@ a{
 
 /* ---------------------------------------- PARTIE CREDITS ----------------------------------------------*/
 
+.img-opera{
+    position: absolute;
+    top: 0;
+    left: 1225vw;
+    height: 100vh;
+    width: 400px;
+    background-image: url(assets/bg/97837792_3086810254709592_4225248131266117632_n.jpg);
+    background-size: cover;
+}
+
 .credits{
     position: absolute;
     top: 0;
-    left: 1235vw;
+    left: 1256vw;
     height: 100vh;
     width: 100vw;
     background-color: #0C0C0C;

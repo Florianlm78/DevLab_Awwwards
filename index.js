@@ -17,7 +17,7 @@ menuTimeline.to('#ml1', 0.2, {
   ease: Expo.easeInOut
 })
 
-menuTimeline.to('#ml2', 0.2, {
+menuTimeline.to('#ml2', 0.4, {
   // delay: "0.3",
   y: "0",
   opacity: "1",
@@ -25,7 +25,7 @@ menuTimeline.to('#ml2', 0.2, {
 })
 
 
-menuTimeline.to('#ml3', 0.2, {
+menuTimeline.to('#ml3', 0.3, {
   // delay: "0.4",
   y: "0",
   opacity: "1",
@@ -34,7 +34,7 @@ menuTimeline.to('#ml3', 0.2, {
 
 
 menuTimeline.to('#ml4', 0.2, {
-  // delay: "0.2",
+  // delay: "0.6",
   y: "0",
   opacity: "1",
   ease: Expo.easeInOut
@@ -61,10 +61,31 @@ burgerMenu.onclick = function() {
 
 
 
-console.log(window.event);
+
+
+let draggableImg = document.getElementById('draggableImg');
+let draggableImg2 = document.getElementById('draggableImg2');
+let draggableImg3 = document.getElementById('draggableImg3');
+
+function RandomPosition(max) {  
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
+
+draggableImg.style.transform = "translateY(" + RandomPosition(10) + "vw) translateX(" + RandomPosition(100) + "vw)";
+draggableImg2.style.transform = "translateY(" + RandomPosition(2) + "vw) translateX(" + RandomPosition(80) + "vw)";
+draggableImg3.style.transform = "translateY(" + RandomPosition(3) + "vw) translateX(" + RandomPosition(40) + "vw)";
+draggableImg4.style.transform = "translateY(" + RandomPosition(4) + "vw) translateX(" + RandomPosition(70) + "vw)";
+draggableImg5.style.transform = "translateY(" + RandomPosition(6) + "vw) translateX(" + RandomPosition(20) + "vw)";
+draggableImg6.style.transform = "translateY(" + RandomPosition(8) + "vw) translateX(" + RandomPosition(90) + "vw)";
+
 
 dragElement(document.getElementById("draggableImg"));
 dragElement(document.getElementById("draggableImg2"));
+dragElement(document.getElementById("draggableImg3"));
+dragElement(document.getElementById("draggableImg4"));
+dragElement(document.getElementById("draggableImg5"));
+dragElement(document.getElementById("draggableImg6"));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;

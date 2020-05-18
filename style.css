@@ -257,12 +257,27 @@ a{
     display: flex;
     top: 0;
     left: 100vw;
-
     height: 100vh;
     width: 100vw;
-    background-image: url(assets/gallery/escalier.png);
-    background-size: cover;
+    z-index: 1;
+    overflow: hidden;
+    
 }
+
+.num-title-h {
+    z-index: 1;
+}
+
+.num-section-bg {
+    background-image: url(assets/gallery/escalier.png);
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    position: absolute;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
 .num-title{
     height: 100vh;
     display:flex;

@@ -496,8 +496,6 @@ a{
     text-align: center;
   }
 
-  
-
   #draggableImg img, #draggableImg2 img { 
       width: 500px;
       transition: ease(1s);

@@ -89,6 +89,7 @@ a{
     background-color: #000;
     display: none;
     
+    
 }
 
 .menu-li {
@@ -116,7 +117,10 @@ a{
 
 .navbar {
     background-color: #000;
-    
+}
+
+.h1-navbar{
+    opacity: 1;
 }
 
 .burger-menu-btn.open {

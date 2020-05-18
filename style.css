@@ -117,7 +117,7 @@ a{
 }
 
 
-/* ########### SECTION HISTOIRE ########### */
+/* ########### SECTION HISTOIRE ########## */
 
 .history {
     display: inline;
@@ -396,7 +396,7 @@ a{
 .credits{
     position: absolute;
     top: 0;
-    left: 1125vw;
+    left: 1235vw;
     height: 100vh;
     width: 100vw;
     background-color: #0C0C0C;
@@ -492,6 +492,9 @@ a{
 /* ---------------------------------------- PARTIE GALERY ----------------------------------------------*/
 
 .galery {
+    position: absolute;
+    top:0;
+    left: 1125vw;
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(115,4,2,1) 0%, rgba(82,3,2,1) 100%);
     width: 100vw;
     height: 100vh;

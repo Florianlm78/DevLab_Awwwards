@@ -154,6 +154,12 @@ window.onload = () => {
       let barre = position / scrollLargeur * largeur
 
       let barrePourcentage =  ( barre * 100 ) / largeur
+      if ( barrePourcentage > 6) {
+        document.getElementById("numPartOneBg").style.transform = "scale(" + barrePourcentage/4 + ")";
+        
+      } else {
+        document.getElementById("numPartOneBg").style.height = "scale(" + 0 + ")";
+      }
 
       console.log(barrePourcentage)
       document.getElementById("progressBar").style.height = barrePourcentage +"vh"

@@ -143,7 +143,7 @@ const animation = () => {
 
 window.onload = () => {
   
-  window.addEventListener("scroll", () => {
+  window.addEventLstener("scroll", () => {
       
       let scrollLargeur = document.documentElement.scrollWidth - window.innerWidth
       
@@ -159,4 +159,5 @@ window.onload = () => {
       document.getElementById("progressBar").style.height = barrePourcentage +"vh"
   })
 }
+
 

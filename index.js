@@ -144,21 +144,26 @@ const animation = () => {
 window.onload = () => {
   
   window.addEventListener("scroll", () => {
-      
       let scrollLargeur = document.documentElement.scrollWidth - window.innerWidth
-      
       let position = window.scrollX
-      
       let largeur = document.documentElement.clientWidth
-      
       let barre = position / scrollLargeur * largeur
-
       let barrePourcentage =  ( barre * 100 ) / largeur
 
+      if ( barrePourcentage > 4) {
+        document.getElementById("numPartOneBg").style.transform = "scale(" + barrePourcentage/4 + ")";
+        
+      } else {
+        document.getElementById("numPartOneBg").style.height = 100 + "vh";
+      }
+
       console.log(barrePourcentage)
-      document.getElementById("progressBar").style.height = barrePourcentage +"vh"
+      document.getElementById("progressBar").style.height = barrePourcentage +"vh";
   })
 }
+
+
+
 
 /*
 var item = document.getElementsByTagName('BODY')[0];

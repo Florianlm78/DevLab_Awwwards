@@ -5,6 +5,12 @@
     margin: 0;
     padding: 0;
     overflow-y: hidden;
+    scroll-behavior: smooth;
+   
+}
+
+body {
+    width: 100%;
 }
 
 a{
@@ -13,11 +19,116 @@ a{
 }
 
 
-/* ---------------------------------------- PARTIE CHIFFRES ----------------------------------------------*/
+/* ########### SECTION HISTOIRE ########### */
 
-body{
-    width: 4200px;
+.history {
+    display: inline;
 }
+
+.s3-hist {
+    display: inline-flex;
+    height: 100vh;
+}
+
+.s3-hist .title {
+    display: flex;
+    background-color: black;
+    width: 40vw;
+    align-items: center;
+}
+
+.s3-hist h2 {
+    font: 250px/200px Bellota Text;
+    text-align: center;
+    font-weight: 100;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-shadow: -11px -9px #3E3E3E;
+}
+
+.hist-bg {
+    display: flex;
+    background-image: url(assets/bg/Paris_Oper_um_1900.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 90vw;
+    filter: grayscale(0.6);
+}
+
+/* frise chronologique */
+
+.s3-date {
+    display: inline-flex;
+    height: 100vh;
+    width: 600%;
+}
+
+.s3-date .sect-date {
+    display: inline-flex;
+    width: 200%;
+}
+
+.s3-date .date{
+    display: flex;
+    background-color: #C89C12;
+    height: 100vh;
+    width: 220px;
+}
+
+.s3-date .date h2 {
+    font: 160px/200px Bellota Text;
+    font-weight: 100;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 5vh;
+}
+
+.s3-date .date-bg {
+    display: flex;
+    height: 100vh;
+    position: relative;
+}
+
+.date-bg img {
+    object-fit: cover;
+    position: relative;
+    opacity: 50%;
+    width: 100vw;
+}
+
+.date-bg .period {
+    position: absolute;
+    font: 30px/43px Amiri;
+    margin-top: 80vh;
+    margin-left: 8vw;
+    text-align: end;
+    color: white;
+}
+
+.date-bg .period .txt {
+    position: relative;
+}
+
+.date-bg .period h2 {
+    letter-spacing: 2px;
+    color: #02020278;;
+    text-shadow: 1px 1px #8e8481;
+}
+
+#date-red .date {
+    background-color: #730402;
+}
+
+#date-red .period h2 {
+    color: #730402;
+}
+
+
+/* ---------------------------------------- PARTIE CHIFFRES ----------------------------------------------*/
 
 /* PARTIE 1 */
 

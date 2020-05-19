@@ -7,8 +7,9 @@
 *{
     margin: 0;
     padding: 0;
-    overflow-y: unset;
-    scroll-behavior: smooth;
+    /* overflow-y: hidden; */
+    /* scroll-behavior: smooth; */
+    
    
 }
 
@@ -23,6 +24,54 @@ a {
 }
 
 
+
+/* ---------------------------------------- PARTIE PRELOADER ----------------------------------------------*/
+
+.preloader {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 20;
+    overflow: hidden;
+    
+}
+
+
+.preloader-bg {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.preloader-txt {
+    position: absolute;
+    color: #FFFFFF;
+    z-index: 99;
+    /* background-color: #580302; */
+    font-family: 'Amiri';
+    color: #C89C12;
+    font-weight: 900;
+    font-size: 90px;
+    top: 47vh;
+    left: 37vw;
+    
+    
+}
+
+.l-preloader , .r-preloader {
+    width:  50vw;
+}
+
+.l-preloader {
+    background-color:#580302;
+    transform: translate(0vw);
+}
+
+.r-preloader {
+    background-color: #580302;
+    transform: translate(0vw);
+}
+
 /* ---------------------------------------- PARTIE HOME ----------------------------------------------*/
 
 .home{
@@ -31,7 +80,14 @@ a {
     left: 0;
     width: 100vw;
     height: 100vh;
+    background-color: #000;
+}
+
+.home-bg {
     background-image: url(assets/bg/homepage-bg.JPG);
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
     background-size: cover;
 }
 
@@ -49,7 +105,7 @@ a {
     width: 50px;
     height: 100vh;
     display: block;
-    /* background-color: black; */
+    background-color: #00000080;
     padding: 10px;
 }
 
@@ -91,10 +147,8 @@ a {
 .menu {
     width: 0%;
     height: 100vh;
-    background-color: #000;
+    background-color: #00000080;
     display: none;
-    
-    
 }
 
 .menu-li {
@@ -120,10 +174,6 @@ a {
     
 }
 
-.navbar {
-    background-color: #000;
-}
-
 #h1-navbar{
     font-family: 'Bellota Text', cursive;
     font-size: 25px;
@@ -140,20 +190,7 @@ a {
 }
 
 /* ########### SCROLL ########### */
-#container {
-    overflow-y:scroll;
-    overflow-x:hidden;
-    transform: rotate(270deg) translateX(-100%);
-    transform-origin: top left;
-    width:100vh;
-    height:100vw;
-}
 
-#container-2 {
-    transform: rotate(90deg) translateY(-100vh);
-    transform-origin: top left;
-    white-space:nowrap;
-}
 
 /* ########### SECTION HISTOIRE ########### */
 
@@ -417,17 +454,17 @@ a {
 .img-opera{
     position: absolute;
     top: 0;
-    left: 1145vw;
+    left: 1135vw;
     height: 100vh;
-    width: 20vw;
-    background-image: url(assets/bg/97837792_3086810254709592_4225248131266117632_n.jpg);
+    width: 50vw;
+    background-image: url(assets/bg/steven-lasry-hFysDVSzi8M-unsplash.jpg);
     background-size: cover;
 }
 
 .credits{
     position: absolute;
     top: 0;
-    left: 1165vw;
+    left: 1183vw;
     height: 100vh;
     width: 100vw;
     background-color: #0C0C0C;
@@ -448,6 +485,7 @@ a {
     writing-mode: vertical-lr;
     transform:rotate(-180deg);
     text-shadow: 0.1em -0.05em rgba(255, 255, 255, 0.3);
+    margin-left: 70px;
 }
 
 .cred-box{
@@ -549,6 +587,8 @@ a {
     position: absolute;
     background-position: center center;
     background-repeat: no-repeat;
+    transform: scale(2);
+    transition: transform 0.8s;
 }
 
 .num-title{
@@ -559,6 +599,7 @@ a {
 }
 
 .num-title-h{
+    margin-left: 70px;
     font-family: 'Bellota Text', cursive;
     font-size: 130px;
     color: white;
@@ -701,12 +742,12 @@ a {
 
 
 
-/* ---------------------------------------- PARTIE GALERY ----------------------------------------------*/
+/* ---------------------------------------- PARTIE GALLERY ----------------------------------------------*/
 
 .galery {
     position: absolute;
     top:0;
-    left: 1045vw;
+    left: 1040vw;
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(115,4,2,1) 0%, rgba(82,3,2,1) 100%);
     width: 100vw;
     height: 100vh;
@@ -727,7 +768,7 @@ a {
   }
 
   #draggableImg2 img {
-      width: 20vw;
+      width: 30vw;
   }
 
   

@@ -1,148 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Bellota+Text:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
 
+::-webkit-scrollbar{width:2px;height:2px;}
+::-webkit-scrollbar-button{width:2px;height:2px;}
+
 *{
     margin: 0;
     padding: 0;
-    overflow-y: hidden;
+    overflow-y: unset;
     scroll-behavior: smooth;
    
 }
 
 body {
     width: 100%;
+    max-height: 100vh;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
 }
 
-/* ---------------------------------------- PARTIE HOME ----------------------------------------------*/
+/* ########### SCROLL ########### */
 
-.home{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url(assets/bg/homepage-bg.JPG);
-    background-size: cover;
-}
-
-/* ---------------------------------------- PARTIE MENU ----------------------------------------------*/
-
-
-.navbar-menu {
-    display: flex;
-    /* width: 100%; */
-    position: fixed;
-    z-index: 10;
-}
-
-.navbar {
-    width: 50px;
-    height: 100vh;
-    display: block;
-    /* background-color: black; */
-    padding: 10px;
-    opacity: 0.5;
-}
-
-.navbar h1 {
-    transform: rotate(-90deg);
-    /* margin-top: 44vh; */
-    position: absolute;
-    top: 45vh;
-    left: -4.8vh;
-    /* width: calc(79.30556vh - 3.30729vw); */
-    width: 150px;
-    color: #C89C12;
-    /* text-transform: uppercase; */
-
-}
-
-.burger-menu-btn {
-    background: none;
-    border: none;
-    text-align: center;
-    outline: none;
-    animation-duration: 1s;
-    transition: all 0.3s ease-in-out;
-    margin-left: 0.5vh;
-    /* background-color: red; */
-    
-}
-
-.burger-menu-btn span {
-  background : #C89C12;
-  width: 30px;
-  height: 3px;
-  display: block;
-  margin-bottom: 5px;
-  
-  
-}
-
-.menu {
-    width: 0%;
-    height: 100vh;
-    background-color: #000;
-    display: none;
-    
-    
-}
-
-.menu-li {
-    color: #C89C12;
-    font-size: 8rem;
-    list-style: none;
-    text-transform: uppercase;
-    font-family: 'Bellota Text', cursive;
-    font-weight: 900;
-    transform: translateY(15vh);
-    opacity: 0;
-}
-
-
-.progress-bar {
-    background-color:  #C89C12;;
-    height: 100vh;
-    width: 3px;
-}
-
-.menu-content {
-    margin: 40px;
-    
-}
-
-.navbar {
-    background-color: #000;
-}
-
-#h1-navbar{
-    font-family: 'Bellota Text', cursive;
-    font-size: 25px;
-    opacity: 1;
-}
-
-.burger-menu-btn.open {
-    transform: rotate(90deg);
-}
-
-
-.home img {
-    width: 100vw;
-}
-
-
-/* ########### SECTION HISTOIRE ########## */
+/* ########### SECTION HISTOIRE ########### */
 
 .history {
     display: inline;
-    position: absolute;
-    top: 0;
-    left: 300vw;
 }
 
 .s3-hist {
@@ -182,16 +67,11 @@ a{
     display: inline-flex;
     height: 100vh;
     width: 600%;
-    position: absolute;
-    left: 130vw;
-    top: 0;
 }
-
-
 
 .s3-date .sect-date {
     display: inline-flex;
-    
+    width: 100vw;
 }
 
 .s3-date .date{
@@ -199,6 +79,7 @@ a{
     background-color: #C89C12;
     height: 100vh;
     width: 220px;
+    z-index: 2;
 }
 
 .s3-date .date h2 {
@@ -218,7 +99,7 @@ a{
     position: relative;
 }
 
-.date-bg img {
+.date-bg img#bg-img-date  {
     object-fit: cover;
     position: relative;
     opacity: 50%;
@@ -239,7 +120,7 @@ a{
 }
 
 .date-bg .period h2 {
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     color: #02020278;;
     text-shadow: 1px 1px #8e8481;
 }
@@ -248,325 +129,147 @@ a{
     background-color: #730402;
 }
 
-
 #date-red .period h2 {
     color: #730402;
 }
 
+/* wrapper img */
 
-/* ---------------------------------------- PARTIE CHIFFRES ----------------------------------------------*/
-
-/* PARTIE 1 */
-
-
-.num-partOne{
+#wrapper {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transform: rotate(270deg) translateX(-100%);
+    transform-origin: top left;
     position: absolute;
-    display: flex;
-    top: 0;
-    left: 100vw;
-    height: 100vh;
-    width: 100vw;
-    z-index: 1;
-    overflow: hidden;
-    
+    width: 100vh;
+    height: 90vw;
 }
 
-.num-title-h {
-    z-index: 1;
+#wrp-img {
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+    white-space: nowrap;
+    padding-top: 7vh;
 }
 
-.num-section-bg {
-    background-image: url(assets/gallery/escalier.png);
-    height: 100vh;
-    width: 100vw;
-    background-size: cover;
+#wrapper .box-img {
+    width: 60vw;
+    height: 60vh;
+    display: inline-block;
+    position: relative;
+    margin: 10px;
+    margin-right: 10vw;
+}
+
+#wrapper .box-img img{
+    height: 60vh;
     position: absolute;
-    background-position: center center;
-    background-repeat: no-repeat;
+    box-shadow: 8px 9px 13px 0px #0000004a;
 }
 
-.num-title{
-    height: 100vh;
-    display:flex;
-    align-items:center;
-    cursor: default;
+#blank {
+    width: 100vw !important;
+    margin-right: 0 !important;
 }
 
-.num-title-h{
-    font-family: 'Bellota Text', cursive;
-    font-size: 130px;
-    color: white;
-    writing-mode: vertical-lr;
-    transform:rotate(-180deg);
-    text-shadow: 0.1em -0.1em rgba(255, 255, 255, 0.3);
+/* 1861 */
+#OpC1 {
+    width: 344px !important;
 }
 
-
-
-/* PARTIE 2 */
-
-.num-partTwo{
-    display: flex;
-    height: 100vh;
+#OpC2 {
+    width: 604px !important;
 }
 
-.num-square{
-    z-index: 1;
-    display: inline-flex;
-    position: absolute;
-    top: 0px;
-    left: 150vw;
-    height: 0;
-    width: 0;
-    border-top    : 50vh solid transparent;
-    border-bottom : 50vh solid transparent;
-    border-right  : 256px solid #730402;
+#OpC3 {
+    width: 687px !important;
 }
 
-.num-square-two{
-    z-index: 2;
-    position: absolute;
-    height: 100vh;
-    width: 250px;
-    top: 0;
-    left: 170vw;
-    background-color: #730402;
+#OpC4 {
+    width: 680px !important;
 }
 
-.num-square-three{
-    z-index: 2;
-    position: absolute;
-    height: 100vh;
-    width: 600px;
-    top: 0;
-    left: 185vw;
-    background-color: #730402;
-
+/* 1875 */
+#OpI1 {
+    width: 700px !important;
 }
 
-.num-square-img{
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 202vw;
-    height: 100vh;
-    width: 100%;
-    background-image: url(assets/gallery/oiuepp7bbx9vnleozxtv.jpg);
-    background-size: cover;
+#OpI2 {
+    width: 363px !important;
 }
 
-
-/* PARTIE TEXTE */
-
-.num-visitor{
-    position: absolute;
-    font-family: 'Bellota Text', cursive;
-    line-height: 70px;
-    font-size: 50px;
-    text-align: center;
-    color: white;
-    top: 10%;
-    left: 120vw;
-    height: 200px;
-    width: 400px;
+#OpI3 {
+    width: 346px !important;
 }
 
-.num-employees{
-    position: absolute;
-    font-family: 'Bellota Text', cursive;
-    line-height: 70px;
-    font-size: 50px;
-    text-align: center;
-    color: white;
-    bottom: 10%;
-    left: 120vw;
-    height: 200px;
-    width: 400px;
+#OpI4 {
+    width: 680px !important;
 }
 
-.num-age{
-    z-index: 2;
-    position: absolute;
-    font-family: 'Bellota Text', cursive;
-    line-height: 70px;
-    font-size: 50px;
-    text-align: center;
-    color: white;
-    top: 35vh;
-    left: 160vw;
-    height: 200px;
-    width: 400px;
+#OpI5 {
+    width: 430px !important;
 }
 
-.num-representation{
-    z-index: 2;
-    position: absolute;
-    font-family: 'Bellota Text', cursive;
-    line-height: 70px;
-    font-size: 50px;
-    text-align: center;
-    color: white;
-    top: 10%;
-    left: 200vw;
-    height: 200px;
-    width: 400px;
+/* 1900 */
+#OpPS1 {
+    width: 693px !important;
 }
 
-.num-filling{
-    z-index: 2;
-    position: absolute;
-    font-family: 'Bellota Text', cursive;
-    line-height: 70px;
-    font-size: 50px;
-    text-align: center;
-    color: white;
-    bottom: 10%;
-    left: 200vw;
-    height: 210px;
-    width: 400px;
+#OpPS2 {
+    width: 692px !important;
 }
 
-/* ---------------------------------------- PARTIE CREDITS ----------------------------------------------*/
-
-.img-opera{
-    position: absolute;
-    top: 0;
-    left: 1225vw;
-    height: 100vh;
-    width: 400px;
-    background-image: url(assets/bg/97837792_3086810254709592_4225248131266117632_n.jpg);
-    background-size: cover;
+#OpPS3 {
+    width: 636px !important;
 }
 
-.credits{
-    position: absolute;
-    top: 0;
-    left: 1256vw;
-    height: 100vh;
-    width: 100vw;
-    background-color: #0C0C0C;
+#OpPS4 {
+    width: 480px !important;
 }
 
-
-.cred-title{
-    height: 100vh;
-    display:flex;
-    align-items:center;
-    cursor: default;
+/* 1940 */
+#OpO1 {
+    width: 825px !important;
 }
 
-.cred-title-h{
-    font-family: 'Bellota Text', cursive;
-    font-size: 130px;
-    color: white;
-    writing-mode: vertical-lr;
-    transform:rotate(-180deg);
-    text-shadow: 0.1em -0.05em rgba(255, 255, 255, 0.3);
+#OpO2 {
+    width: 338px !important;
 }
 
-.cred-box{
-    position: absolute;
-    top: 10%;
-    left: 45%;
-    height: 200px;
-    width: 350px;
-    background-color: #580302;
-    box-shadow: -10px -10px #AA151B;
+#OpO3 {
+    width: 850px !important;
 }
 
-.cred-box-content{
-    font-family: 'Bellota Text', cursive;
-    color: white;
-    font-size: 17px;
-    padding: 20px 20px;
+/* 1950 */
+#OpT1 {
+    width: 364px !important;
 }
 
-.cred-link{
-    position: absolute;
-    bottom: 10%;
-    left: 25%;
-    width: 850px;
-    height: 300px;
-    font-family: 'Bellota Text', cursive;
-    color: white;
+#OpT2 {
+    width: 646px !important;
 }
 
-.cred-link-title{
-    text-align: center;
-    font-size: 35px;
+#OpT3 {
+    width: 705px !important;
 }
 
-.cred-link-dev{
-    z-index: 2;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 10%;
+#OpT4 {
+    width: 420px !important;
 }
 
-.cred-link-href{
-    margin-top: 15px;
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 20px;
+/* 2000 */
+#OpN1 {
+    width: 822px !important;
 }
 
-.cred-link-name{
-    font-size: 25px;
+#OpN2 {
+    width: 694px !important;
 }
 
-
-.cred-link-trait-one{
-    position: absolute;
-    top: 30%;
-    left: 35%;
-    height: 150px;
-    width: 2px;
-    background-color: #C5171B;
+#OpN3 {
+    width: 331px !important;
 }
 
-.cred-link-trait-two{
-    position: absolute;
-    top: 30%;
-    left: 67%;
-    height: 150px;
-    width: 2px;
-    background-color: #C5171B;
+#OpN4 {
+    width: 350px !important;
 }
-
-
-/* ---------------------------------------- PARTIE GALERY ----------------------------------------------*/
-
-.galery {
-    position: absolute;
-    top:0;
-    left: 1125vw;
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(115,4,2,1) 0%, rgba(82,3,2,1) 100%);
-    width: 100vw;
-    height: 100vh;
-    
-}
-
-.draggableImg  {
-    position: absolute;
-    z-index: 1;
-    text-align: center;
-    left: 10vw;
-    top: 3vh;
-    /* top: 50vw; */
-
-  }
-.galery img { 
-      width: 30vw;
-  }
-
-  #draggableImg2 img {
-      width: 20vw;
-  }
-
-  
-  #mydivheader {
-    padding: 1px;
-    cursor: move;
-    z-index: 10;
-  }
-

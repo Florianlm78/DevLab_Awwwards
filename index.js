@@ -42,11 +42,46 @@ ease: Expo.easeInOut
 
 
 menuTimeline.to('#ml4', 0.2, {
-// delay: "0.6",
-y: "0",
-opacity: "1",
-ease: Expo.easeInOut
+  y: "0",
+  opacity: "1",
+  ease: Expo.easeInOut
 })
+
+preloaderAnimation = new TimelineMax({paused:true});
+
+
+preloaderAnimation.to('#preloaderTxt', 1, {
+  y: "-10px",
+  opacity: "0",
+  ease: Expo.easeInOut
+},"end")
+
+preloaderAnimation.to('.l-preloader', 2.3, {
+  x: "-100vw",
+  ease: Expo.easeInOut
+} ,"end")
+
+preloaderAnimation.to('.r-preloader', 2.3, {
+  x: "100vw",
+  ease: Expo.easeInOut
+}, "end")
+
+preloaderAnimation.to('.home-bg', 1.5, {
+  opacity: "1",
+  ease: Expo.easeInOut
+},"end")
+
+preloaderAnimation.to('#preloader', 2, {
+  display: "none"
+})
+
+try {
+  window.addEventListener("load", () => {
+      preloaderAnimation.play()
+  })
+  } catch {
+    console.log("pas de loader");
+  }
 
 
 burgerMenu.onclick = function() {
@@ -152,20 +187,34 @@ window.onload = () => {
 
 window.addEventListener("scroll", () => {
       let scrollLargeur = document.documentElement.scrollWidth - window.innerWidth
-          position = window.scrollX
-          largeur = document.documentElement.clientWidth
-          barre = position / scrollLargeur * largeur
-          barrePourcentage =  ( barre * 100 ) / largeur
+      let position = window.scrollX
+      let largeur = document.documentElement.clientWidth
+      let barre = position / scrollLargeur * largeur
+      let barrePourcentage =  ( barre * 100 ) / largeur
 
-          if ( barrePourcentage > 6) {
-            document.getElementById("numPartOneBg").style.transform = "scale(" + barrePourcentage/4 + ")";
-            
-          } else {
-            document.getElementById("numPartOneBg").style.height = "scale(" + 0 + ")";
-          }
-          
+      if ( barrePourcentage > 6) {
+        document.getElementById("numPartOneBg").style.transform = "scale(" + Math.sqrt(barrePourcentage) + ")";
+        
+      } else {
+        document.getElementById("numPartOneBg").style.height = "scale(" + 0 + ")";
+      }
 
-      console.log(barrePourcentage)
+      
+     scrollTriggerOnes = (trigger) => {
+      
+      let checkMarker = false;
+      if( barrePourcentage === trigger && checkMarker === false ) {
+
+            checkMarker = true;
+            console.log("carre");
+            console.log(checkMarker);
+       
+      }
+
+      }
+      scrollTriggerOnes(7)
+
+      console.log(Math.sqrt(barrePourcentage))
       progressBar.style.height = barrePourcentage +"vh";
 })
 }

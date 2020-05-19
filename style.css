@@ -22,6 +22,124 @@ a {
     color: white;
 }
 
+
+/* ---------------------------------------- PARTIE HOME ----------------------------------------------*/
+
+.home{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(assets/bg/homepage-bg.JPG);
+    background-size: cover;
+}
+
+/* ---------------------------------------- PARTIE MENU ----------------------------------------------*/
+
+
+.navbar-menu {
+    display: flex;
+    /* width: 100%; */
+    position: fixed;
+    z-index: 10;
+}
+
+.navbar {
+    width: 50px;
+    height: 100vh;
+    display: block;
+    /* background-color: black; */
+    padding: 10px;
+    opacity: 0.5;
+}
+
+.navbar h1 {
+    transform: rotate(-90deg);
+    /* margin-top: 44vh; */
+    position: absolute;
+    top: 45vh;
+    left: -4.8vh;
+    /* width: calc(79.30556vh - 3.30729vw); */
+    width: 150px;
+    color: #C89C12;
+    /* text-transform: uppercase; */
+
+}
+
+.burger-menu-btn {
+    background: none;
+    border: none;
+    text-align: center;
+    outline: none;
+    animation-duration: 1s;
+    transition: all 0.3s ease-in-out;
+    margin-left: 0.5vh;
+    /* background-color: red; */
+    
+}
+
+.burger-menu-btn span {
+  background : #C89C12;
+  width: 30px;
+  height: 3px;
+  display: block;
+  margin-bottom: 5px;
+  
+  
+}
+
+.menu {
+    width: 0%;
+    height: 100vh;
+    background-color: #000;
+    display: none;
+    
+    
+}
+
+.menu-li {
+    color: #C89C12;
+    font-size: 8rem;
+    list-style: none;
+    text-transform: uppercase;
+    font-family: 'Bellota Text', cursive;
+    font-weight: 900;
+    transform: translateY(15vh);
+    opacity: 0;
+}
+
+
+.progress-bar {
+    background-color:  #C89C12;;
+    height: 100vh;
+    width: 3px;
+}
+
+.menu-content {
+    margin: 40px;
+    
+}
+
+.navbar {
+    background-color: #000;
+}
+
+#h1-navbar{
+    font-family: 'Bellota Text', cursive;
+    font-size: 25px;
+    opacity: 1;
+}
+
+.burger-menu-btn.open {
+    transform: rotate(90deg);
+}
+
+
+.home img {
+    width: 100vw;
+}
+
 /* ########### SCROLL ########### */
 
 /* ########### SECTION HISTOIRE ########### */
@@ -273,3 +391,319 @@ a {
 #OpN4 {
     width: 350px !important;
 }
+
+/* ---------------------------------------- PARTIE CREDITS ----------------------------------------------*/
+
+.img-opera{
+    position: absolute;
+    top: 0;
+    left: 1225vw;
+    height: 100vh;
+    width: 400px;
+    background-image: url(assets/bg/97837792_3086810254709592_4225248131266117632_n.jpg);
+    background-size: cover;
+}
+
+.credits{
+    position: absolute;
+    top: 0;
+    left: 1256vw;
+    height: 100vh;
+    width: 100vw;
+    background-color: #0C0C0C;
+}
+
+
+.cred-title{
+    height: 100vh;
+    display:flex;
+    align-items:center;
+    cursor: default;
+}
+
+.cred-title-h{
+    font-family: 'Bellota Text', cursive;
+    font-size: 130px;
+    color: white;
+    writing-mode: vertical-lr;
+    transform:rotate(-180deg);
+    text-shadow: 0.1em -0.05em rgba(255, 255, 255, 0.3);
+}
+
+.cred-box{
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    height: 200px;
+    width: 350px;
+    background-color: #580302;
+    box-shadow: -10px -10px #AA151B;
+}
+
+.cred-box-content{
+    font-family: 'Bellota Text', cursive;
+    color: white;
+    font-size: 17px;
+    padding: 20px 20px;
+}
+
+.cred-link{
+    position: absolute;
+    bottom: 10%;
+    left: 25%;
+    width: 850px;
+    height: 300px;
+    font-family: 'Bellota Text', cursive;
+    color: white;
+}
+
+.cred-link-title{
+    text-align: center;
+    font-size: 35px;
+}
+
+.cred-link-dev{
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10%;
+}
+
+.cred-link-href{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
+
+.cred-link-name{
+    font-size: 25px;
+}
+
+
+.cred-link-trait-one{
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    height: 150px;
+    width: 2px;
+    background-color: #C5171B;
+}
+
+.cred-link-trait-two{
+    position: absolute;
+    top: 30%;
+    left: 67%;
+    height: 150px;
+    width: 2px;
+    background-color: #C5171B;
+}
+
+
+/* ---------------------------------------- PARTIE CHIFFRES ----------------------------------------------*/
+
+/* PARTIE 1 */
+
+
+.num-partOne{
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 100vw;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    overflow: hidden;
+    
+}
+
+.num-title-h {
+    z-index: 1;
+}
+
+.num-section-bg {
+    background-image: url(assets/gallery/escalier.png);
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    position: absolute;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.num-title{
+    height: 100vh;
+    display:flex;
+    align-items:center;
+    cursor: default;
+}
+
+.num-title-h{
+    font-family: 'Bellota Text', cursive;
+    font-size: 130px;
+    color: white;
+    writing-mode: vertical-lr;
+    transform:rotate(-180deg);
+    text-shadow: 0.1em -0.1em rgba(255, 255, 255, 0.3);
+}
+
+
+
+/* PARTIE 2 */
+
+.num-partTwo{
+    display: flex;
+    height: 100vh;
+}
+
+.num-square{
+    z-index: 1;
+    display: inline-flex;
+    position: absolute;
+    top: 0px;
+    left: 150vw;
+    height: 0;
+    width: 0;
+    border-top    : 50vh solid transparent;
+    border-bottom : 50vh solid transparent;
+    border-right  : 256px solid #730402;
+}
+
+.num-square-two{
+    z-index: 2;
+    position: absolute;
+    height: 100vh;
+    width: 250px;
+    top: 0;
+    left: 170vw;
+    background-color: #730402;
+}
+
+.num-square-three{
+    z-index: 2;
+    position: absolute;
+    height: 100vh;
+    width: 600px;
+    top: 0;
+    left: 185vw;
+    background-color: #730402;
+
+}
+
+.num-square-img{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 202vw;
+    height: 100vh;
+    width: 100%;
+    background-image: url(assets/gallery/oiuepp7bbx9vnleozxtv.jpg);
+    background-size: cover;
+}
+
+
+/* PARTIE TEXTE */
+
+.num-visitor{
+    position: absolute;
+    font-family: 'Bellota Text', cursive;
+    line-height: 70px;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    top: 10%;
+    left: 120vw;
+    height: 200px;
+    width: 400px;
+}
+
+.num-employees{
+    position: absolute;
+    font-family: 'Bellota Text', cursive;
+    line-height: 70px;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    bottom: 10%;
+    left: 120vw;
+    height: 200px;
+    width: 400px;
+}
+
+.num-age{
+    z-index: 2;
+    position: absolute;
+    font-family: 'Bellota Text', cursive;
+    line-height: 70px;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    top: 35vh;
+    left: 160vw;
+    height: 200px;
+    width: 400px;
+}
+
+.num-representation{
+    z-index: 2;
+    position: absolute;
+    font-family: 'Bellota Text', cursive;
+    line-height: 70px;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    top: 10%;
+    left: 200vw;
+    height: 200px;
+    width: 400px;
+}
+
+.num-filling{
+    z-index: 2;
+    position: absolute;
+    font-family: 'Bellota Text', cursive;
+    line-height: 70px;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    bottom: 10%;
+    left: 200vw;
+    height: 210px;
+    width: 400px;
+}
+
+/* ---------------------------------------- PARTIE GALERY ----------------------------------------------*/
+
+.galery {
+    position: absolute;
+    top:0;
+    left: 1125vw;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(115,4,2,1) 0%, rgba(82,3,2,1) 100%);
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+.draggableImg  {
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    left: 10vw;
+    top: 3vh;
+    /* top: 50vw; */
+
+  }
+.galery img { 
+      width: 30vw;
+  }
+
+  #draggableImg2 img {
+      width: 20vw;
+  }
+
+  
+  #mydivheader {
+    padding: 1px;
+    cursor: move;
+    z-index: 10;
+  }

@@ -193,17 +193,19 @@ window.addEventListener("scroll", () => {
       let position = window.scrollX
       let largeur = document.documentElement.clientWidth
       let barre = position / scrollLargeur * largeur
-      let barrePourcentage =  ( barre * 100 ) / largeur
+      let ScrollingPagePourcent =  ( barre * 100 ) / largeur
 
-      if ( barrePourcentage > 6) {
-        document.getElementById("numPartOneBg").style.transform = "scale("  + Math.sqrt(barrePourcentage/6) + ")";
+      if ( ScrollingPagePourcent > 6) {
+        document.getElementById("numPartOneBg").style.transform = "scale("  + Math.sqrt(ScrollingPagePourcent/6) + ")";
         
       } else {
         document.getElementById("numPartOneBg").style.transform = "scale(" + 1 + ")";
       }
-      console.log(barrePourcentage)
+      console.log(ScrollingPagePourcent)
       
-      if( barrePourcentage > 7 && checkMarker === false ) {
+     
+
+      if( ScrollingPagePourcent > 7 && checkMarker === false ) {
 
             checkMarker = true;
             console.log(checkMarker);
@@ -214,7 +216,8 @@ window.addEventListener("scroll", () => {
             setTimeout(compteur5, delta5);
       }
       
-      progressBar.style.height = barrePourcentage +"vh";
+      
+      progressBar.style.height = ScrollingPagePourcent +"vh";
 })
 }
 

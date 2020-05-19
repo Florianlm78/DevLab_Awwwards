@@ -7,6 +7,17 @@
     <title>Palais Garnier</title>
 </head>
 <body>
+    <div class="preloader" id="preloader">
+        
+        <div class="preloader-txt" id="preloaderTxt"> Palais Garnier </div>
+        
+        <div class="preloader-bg">
+            <div class="l-preloader"></div>
+            <div class="r-preloader"></div>
+        </div>
+        
+        
+    </div>
 
    <!--- section Nav -->
     <nav class="navbar-menu" id="navbarMenu">
@@ -36,17 +47,17 @@
         </div>
     </nav>
 
-<!-- # Container # -->
-<div id="container">
-    <div id="container-2">
-   
-    
-        <!-- # section Page Accueil # -->
-        <div class="home">
-        </div>
+  <!-- # section Page Accueil # -->
+        
+    <!--section Page Accueil<-->
+    <div class="home">
+        <div class="home-bg"></div>
+    </div>
+
+
 
         <!-- # section Chiffres # -->
-        <section class="number">
+        <section class="number" id="number">
             <div class="num-partOne" id="numPartOne">
                 <div class="num-title">
                     <h2 class="num-title-h"> CHIFFRES</h2>
@@ -54,50 +65,55 @@
                 <div class="num-section-bg" id="numPartOneBg" ></div>
             </div>
 
-            <div class="num-partTwo">
-                <div class="num-square"></div>
-                <div class="num-square-two"></div>
-                <div class="num-square-three"></div>
-                <div class="num-square-img"></div>
-            </div>
-
             <div class="num-partInfo">
                 <div class="num-visitor">
-                    <h2 class="num-information">780 000</h2>
+                    <h2 class="num-information" id="num-information-nb-1">0</h2>
                     <p class="num-description">Visiteur en 2018</p>
                 </div>
 
                 <div class="num-employees">
-                    <h2 class="num-information">1 600</h2>
+                    <h2 class="num-information" id="num-information-nb-2">0</h2>
                     <p class="num-description">Salariés</p>
                 </div>
+            </div>
 
-                <div class="num-age">
-                    <h2 class="num-information">45 ANS</h2>
-                    <p class="num-description">Moyenne d'âge des spectateurs</p>
-                </div>
-
-                <div class="num-representation">
-                    <h2 class="num-information">500</h2>
-                    <p class="num-description">Représentations par an</p>
-                </div>
-
-                <div class="num-filling">
-                    <h2 class="num-information">92%</h2>
-                    <p class="num-description">Taux de remplissage</p>
+            <div class="num-partTwo">
+            
+                <div class="num-arrow">
+                    <div class="num-square"></div>
+                    <div class="num-square-two">
+                        <div class="num-age">
+                            <h2 class="num-information" id="num-information-nb-3">0 ANS</h2>
+                            <p class="num-description">Moyenne d'âge des<br>spectateurs</p>
+                        </div>
+                    </div>
+                    <div class="num-square-three">
+                        <div class="num-representation">
+                            <h2 class="num-information" id="num-information-nb-4">0</h2>
+                            <p class="num-description">Représentations<br>par an</p>
+                        </div>
+                        <div class="num-filling">
+                            <h2 class="num-information" id="num-information-nb-5">0</h2>
+                            <p class="num-description">Taux de<br>remplissage</p>
+                        </div>
+                    </div> 
                 </div>
             </div>
+
+            <div class="num-square-img"></div>
+
+
         </section>
 
  
         <!-- # section Histoire # -->
   
-        <section class="history">
+        <section class="history" id="history">
 
             <div class="s3-hist">
                 <div class="title">
-                    <h2>His
-                        toi
+                    <h2>His<br>
+                        toi<br>
                         re</h2>
                 </div>
                 <div class="hist-bg"></div>
@@ -243,17 +259,17 @@
         </section>
 
         <!--section Galerie<-->
-        <section class="galery">
+        <section class="galery" id="gallery">
             <div class="num-title">
                 <h2 class="num-title-h">GALERIE</h2>
             </div>
             
             <div class="draggableImg" id="draggableImg">
-                <img id="mydivheader" src="photo/galerie/Palais_Garnier_galery_1.jpg"></img>
+                <img id="mydivheader" src="assets/gallery/oiuepp7bbx9vnleozxtv.jpg"></img>
             </div>
 
             <div class="draggableImg" id="draggableImg2">
-                <img id="mydivheader"  src="photo/galerie/Palais_Garnier_galery_2.jpg"></img>
+                <img id="mydivheader"  src="assets/gallery/ech21593071-1.jpg"></img>
             </div>
         
             <div class="draggableImg" id="draggableImg3">
@@ -274,11 +290,13 @@
 
         </section>
 
-        <div class="img-opera">
+        <div class="transition-img">
+            <div class="img-opera">
+            </div>
         </div>
 
         <!--section Credits<-->
-        <section class="credits">
+        <section class="credits" id="credits">
             <div class="nb">
                 <div class="cred-partOne">
                     <div class="cred-title">
@@ -286,9 +304,9 @@
                     </div>
 
                     <div class="cred-box">
-                        <p class="cred-box-content">Proin vel sem nec augue molestie vulputate sit amet vitae 
-                            tortor. Suspendisse eleifend orci arcu, sit amet posuere tellus fermentum ac. 
-                            Fusce sollicitudin mi nisl, sed pretium arcu fermentum dignissim. Mauris varius 
+                        <p class="cred-box-content">Proin vel sem nec augue molestie vulputate<br>sit amet vitae 
+                            tortor. Suspendisse eleifend<br>orci arcu, sit amet posuere tellus fermentum<br>ac. 
+                            Fusce sollicitudin mi nisl, sed pretium<br>arcu fermentum dignissim. Mauris<br>varius 
                             id ex in rutrum. 
                         </p>
                     </div>
@@ -319,14 +337,14 @@
                                     <a class="cred-link-marvin-ln" href="https://github.com/Marvin-96">GH</a>
                                 </div>
                             </div>
+                            <div class="cred-link-trait-one"></div>
+                            <div class="cred-link-trait-two"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-    </div>
-</div>
 
     <!--Scripts-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>

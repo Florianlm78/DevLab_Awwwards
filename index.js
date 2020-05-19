@@ -42,11 +42,46 @@ ease: Expo.easeInOut
 
 
 menuTimeline.to('#ml4', 0.2, {
-// delay: "0.6",
-y: "0",
-opacity: "1",
-ease: Expo.easeInOut
+  y: "0",
+  opacity: "1",
+  ease: Expo.easeInOut
 })
+
+preloaderAnimation = new TimelineMax({paused:true});
+
+
+preloaderAnimation.to('#preloaderTxt', 1, {
+  y: "-10px",
+  opacity: "0",
+  ease: Expo.easeInOut
+},"end")
+
+preloaderAnimation.to('.l-preloader', 2.3, {
+  x: "-100vw",
+  ease: Expo.easeInOut
+} ,"end")
+
+preloaderAnimation.to('.r-preloader', 2.3, {
+  x: "100vw",
+  ease: Expo.easeInOut
+}, "end")
+
+preloaderAnimation.to('.home-bg', 1.5, {
+  opacity: "1",
+  ease: Expo.easeInOut
+},"end")
+
+preloaderAnimation.to('#preloader', 2, {
+  display: "none"
+})
+
+try {
+  window.addEventListener("load", () => {
+    preloaderAnimation.play()
+  })
+  } catch {
+    console.log("pas de loader");
+  }
 
 
 burgerMenu.onclick = function() {
@@ -146,36 +181,120 @@ console.log(window.scrollX)
 
 }
 
+let container = document.getElementById("container");
+// window.addEventListener("scroll", animation);
 
+let checkMarker = false;
 
 window.onload = () => {
 
 window.addEventListener("scroll", () => {
- let scrollLargeur = document.documentElement.scrollWidth - window.innerWidth
- let position = window.scrollX
- let largeur = document.documentElement.clientWidth
- let barre = position / scrollLargeur * largeur
- let barrePourcentage =  ( barre * 100 ) / largeur
+      let scrollLargeur = document.documentElement.scrollWidth - window.innerWidth
+      let position = window.scrollX
+      let largeur = document.documentElement.clientWidth
+      let barre = position / scrollLargeur * largeur
+      let barrePourcentage =  ( barre * 100 ) / largeur
 
- if ( barrePourcentage > 6) {
-   document.getElementById("numPartOneBg").style.transform = "scale(" + barrePourcentage/4 + ")";
-   
- } else {
-   document.getElementById("numPartOneBg").style.height = "scale(" + 0 + ")";
- }
+      if ( barrePourcentage > 6) {
+        document.getElementById("numPartOneBg").style.transform = "scale("  + Math.sqrt(barrePourcentage/6) + ")";
+        
+      } else {
+        document.getElementById("numPartOneBg").style.transform = "scale(" + 1 + ")";
+      }
+      // console.log(1 + Math.sqrt(barrePourcentage/100))
+      
+     scrollTriggerOnes = (trigger , runAnimation) => {
+      
+     
+      console.log(checkMarker);
+      if( barrePourcentage > trigger && checkMarker === false ) {
 
- console.log(barrePourcentage)
- progressBar.style.height = barrePourcentage +"vh";
+            checkMarker = true;
+            console.log(checkMarker);
+       
+      }
+
+      }
+      scrollTriggerOnes()
+
+      console.log(barrePourcentage);
+      
+      progressBar.style.height = barrePourcentage +"vh";
 })
 }
 
 
 
 
-/*
-var item = document.getElementsByTagName('BODY')[0];
-window.addEventListener('wheel', function(e) {
-if (e.deltaY > 0) item.scrollLeft += 100;
-else item.scrollLeft -= 100;
-});
-*/
+// ------------------------- Comteur chiffre 1 --------------------------
+
+var duree = 1;
+var duree_3 = 2;
+
+var nombre_1 = 780000;
+var nombre_2 = 1600;
+var nombre_3 = 45;
+var nombre_4 = 500;
+var nombre_5 = 92;
+
+var debutCompteur = 779700;
+var debutCompteur2 = 1300;
+var debutCompteur3 = 0;
+var debutCompteur4 = 200;
+var debutCompteur5 = 20;
+
+var delta = Math.ceil((duree * 1000) / nombre_1);
+var delta2 = Math.ceil((duree * 1000) / nombre_2);
+var delta3 = Math.ceil((duree_3 * 1000) / nombre_3);
+var delta4 = Math.ceil((duree * 1000) / nombre_4);
+var delta5 = Math.ceil((duree_3 * 1000) / nombre_5);
+
+var valeur_1 = document.getElementById("num-information-nb-1");
+var valeur_2 = document.getElementById("num-information-nb-2");
+var valeur_3 = document.getElementById("num-information-nb-3");
+var valeur_4 = document.getElementById("num-information-nb-4");
+var valeur_5 = document.getElementById("num-information-nb-5");
+
+function compteur(){
+  valeur_1.innerHTML = ++debutCompteur;
+  if( debutCompteur < nombre_1 ) { 
+    setTimeout(compteur, delta);
+ }
+}
+
+function compteur2(){
+  valeur_2.innerHTML = ++debutCompteur2;
+  if( debutCompteur2 < nombre_2 ) { 
+    setTimeout(compteur2, delta2);
+ }
+}
+
+function compteur3(){
+  valeur_3.innerHTML = ++debutCompteur3 + " ANS";
+  if( debutCompteur3 < nombre_3 ) { 
+    setTimeout(compteur3, delta3);
+ }
+}
+
+
+function compteur4(){
+  valeur_4.innerHTML = ++debutCompteur4;
+  if( debutCompteur4 < nombre_4 ) { 
+    setTimeout(compteur4, delta4);
+ }
+}
+
+function compteur5(){
+  valeur_5.innerHTML = ++debutCompteur5 + "%";
+  if( debutCompteur5 < nombre_5 ) { 
+    setTimeout(compteur5, delta5);
+ }
+}
+
+
+setTimeout(compteur, delta);
+setTimeout(compteur2, delta2);
+setTimeout(compteur3, delta3);
+setTimeout(compteur4, delta4);
+setTimeout(compteur5, delta5);
+

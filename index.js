@@ -195,7 +195,7 @@ window.onload = () => {
       let barrePourcentage =  ( barre * 100 ) / largeur
 
       if ( barrePourcentage > 6) {
-        document.getElementById("numPartOneBg").style.transform = "scale(" + Math.sqrt(barrePourcentage) + ")";
+        document.getElementById("numPartOneBg").style.transform = "scale("  + Math.sqrt(barrePourcentage/6) + ")";
         
       } else {
         document.getElementById("numPartOneBg").style.transform = "scale(" + 1 + ")";

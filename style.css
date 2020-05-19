@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bellota+Text:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
 
-::-webkit-scrollbar{width:2px;height:2px;}
-::-webkit-scrollbar-button{width:2px;height:2px;}
+/*::-webkit-scrollbar{width:2px;height:2px;}
+::-webkit-scrollbar-button{width:2px;height:2px;}*/
 
 *{
     margin: 0;
@@ -178,6 +178,7 @@ a {
 }
 
 .s3-hist h2 {
+    padding-left: 5vw;
     font: 250px/200px Bellota Text;
     text-align: center;
     font-weight: 100;
@@ -417,9 +418,9 @@ a {
 .img-opera{
     position: absolute;
     top: 0;
-    left: 1225vw;
+    left: 1145vw;
     height: 100vh;
-    width: 400px;
+    width: 20vw;
     background-image: url(assets/bg/97837792_3086810254709592_4225248131266117632_n.jpg);
     background-size: cover;
 }
@@ -427,7 +428,7 @@ a {
 .credits{
     position: absolute;
     top: 0;
-    left: 1256vw;
+    left: 1165vw;
     height: 100vh;
     width: 100vw;
     background-color: #0C0C0C;
@@ -574,14 +575,22 @@ a {
 .num-partTwo{
     display: flex;
     height: 100vh;
+
+}
+
+.num-arrow{
+    z-index: 3;
+    display: flex;
+    position: absolute;
+    height: 100vh;
+    width: 80vw;
+    top: 0;
+    left: 150vw;
 }
 
 .num-square{
     z-index: 1;
-    display: inline-flex;
-    position: absolute;
-    top: 0px;
-    left: 150vw;
+    display: inline-block;
     height: 0;
     width: 0;
     border-top    : 50vh solid transparent;
@@ -591,23 +600,20 @@ a {
 
 .num-square-two{
     z-index: 2;
-    position: absolute;
+    display: inline-block;
     height: 100vh;
-    width: 250px;
+    width: 300px;
     top: 0;
-    left: 170vw;
+    left: 20%;
     background-color: #730402;
 }
 
 .num-square-three{
     z-index: 2;
-    position: absolute;
+    display: inline-block;
     height: 100vh;
-    width: 600px;
-    top: 0;
-    left: 185vw;
+    width: 50vw;
     background-color: #730402;
-
 }
 
 .num-square-img{
@@ -616,7 +622,7 @@ a {
     top: 0;
     left: 202vw;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     background-image: url(assets/gallery/oiuepp7bbx9vnleozxtv.jpg);
     background-size: cover;
 }
@@ -625,6 +631,7 @@ a {
 /* PARTIE TEXTE */
 
 .num-visitor{
+    z-index: 5;
     position: absolute;
     font-family: 'Bellota Text', cursive;
     line-height: 70px;
@@ -638,6 +645,7 @@ a {
 }
 
 .num-employees{
+    z-index: 5;
     position: absolute;
     font-family: 'Bellota Text', cursive;
     line-height: 70px;
@@ -651,17 +659,17 @@ a {
 }
 
 .num-age{
-    z-index: 2;
+    z-index: 6;
+    text-align: center;
     position: absolute;
+    top: 35%;
+    left: 20px;
     font-family: 'Bellota Text', cursive;
     line-height: 70px;
     font-size: 50px;
-    text-align: center;
     color: white;
-    top: 35vh;
-    left: 160vw;
-    height: 200px;
-    width: 400px;
+    height: 300px;
+    width: 500px;
 }
 
 .num-representation{
@@ -673,7 +681,7 @@ a {
     text-align: center;
     color: white;
     top: 10%;
-    left: 200vw;
+    left: 45vw;
     height: 200px;
     width: 400px;
 }
@@ -687,17 +695,19 @@ a {
     text-align: center;
     color: white;
     bottom: 10%;
-    left: 200vw;
+    left: 45vw;
     height: 210px;
     width: 400px;
 }
+
+
 
 /* ---------------------------------------- PARTIE GALERY ----------------------------------------------*/
 
 .galery {
     position: absolute;
     top:0;
-    left: 1125vw;
+    left: 1045vw;
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(115,4,2,1) 0%, rgba(82,3,2,1) 100%);
     width: 100vw;
     height: 100vh;

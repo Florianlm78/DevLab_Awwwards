@@ -311,6 +311,7 @@ a{
 }
 
 .num-square{
+    z-index: 1;
     display: inline-flex;
     position: absolute;
     top: 0px;

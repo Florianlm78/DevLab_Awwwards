@@ -203,15 +203,19 @@ window.addEventListener("scroll", () => {
       }
       // console.log(1 + Math.sqrt(barrePourcentage/100))
       
-     scrollTriggerOnes = (trigger , runAnimation) => {
+     scrollTriggerOnes = () => {
       
      
       console.log(checkMarker);
-      if( barrePourcentage > trigger && checkMarker === false ) {
+      if( barrePourcentage > 7 && checkMarker === false ) {
 
             checkMarker = true;
             console.log(checkMarker);
-       
+            setTimeout(compteur, delta);
+            setTimeout(compteur2, delta2);
+            setTimeout(compteur3, delta3);
+            setTimeout(compteur4, delta4);
+            setTimeout(compteur5, delta5);
       }
 
       }
@@ -291,10 +295,4 @@ function compteur5(){
  }
 }
 
-
-setTimeout(compteur, delta);
-setTimeout(compteur2, delta2);
-setTimeout(compteur3, delta3);
-setTimeout(compteur4, delta4);
-setTimeout(compteur5, delta5);
 

@@ -201,12 +201,8 @@ window.addEventListener("scroll", () => {
       } else {
         document.getElementById("numPartOneBg").style.transform = "scale(" + 1 + ")";
       }
-      // console.log(1 + Math.sqrt(barrePourcentage/100))
+      console.log(barrePourcentage)
       
-     scrollTriggerOnes = () => {
-      
-     
-      console.log(checkMarker);
       if( barrePourcentage > 7 && checkMarker === false ) {
 
             checkMarker = true;
@@ -217,11 +213,6 @@ window.addEventListener("scroll", () => {
             setTimeout(compteur4, delta4);
             setTimeout(compteur5, delta5);
       }
-
-      }
-      scrollTriggerOnes()
-
-      console.log(barrePourcentage);
       
       progressBar.style.height = barrePourcentage +"vh";
 })

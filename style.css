@@ -560,14 +560,22 @@ a {
 .num-partTwo{
     display: flex;
     height: 100vh;
+
+}
+
+.num-arrow{
+    z-index: 3;
+    display: flex;
+    position: absolute;
+    height: 100vh;
+    width: 80vw;
+    top: 0;
+    left: 150vw;
 }
 
 .num-square{
     z-index: 1;
-    display: inline-flex;
-    position: absolute;
-    top: 0px;
-    left: 150vw;
+    display: inline-block;
     height: 0;
     width: 0;
     border-top    : 50vh solid transparent;
@@ -577,23 +585,20 @@ a {
 
 .num-square-two{
     z-index: 2;
-    position: absolute;
+    display: inline-block;
     height: 100vh;
-    width: 250px;
+    width: 300px;
     top: 0;
-    left: 170vw;
+    left: 20%;
     background-color: #730402;
 }
 
 .num-square-three{
     z-index: 2;
-    position: absolute;
+    display: inline-block;
     height: 100vh;
-    width: 600px;
-    top: 0;
-    left: 185vw;
+    width: 50vw;
     background-color: #730402;
-
 }
 
 .num-square-img{
@@ -637,17 +642,17 @@ a {
 }
 
 .num-age{
-    z-index: 2;
+    z-index: 6;
+    text-align: center;
     position: absolute;
+    top: 35%;
+    left: 20px;
     font-family: 'Bellota Text', cursive;
     line-height: 70px;
     font-size: 50px;
-    text-align: center;
     color: white;
-    top: 35vh;
-    left: 160vw;
-    height: 200px;
-    width: 400px;
+    height: 300px;
+    width: 500px;
 }
 
 .num-representation{
@@ -659,7 +664,7 @@ a {
     text-align: center;
     color: white;
     top: 10%;
-    left: 200vw;
+    left: 45vw;
     height: 200px;
     width: 400px;
 }
@@ -673,10 +678,12 @@ a {
     text-align: center;
     color: white;
     bottom: 10%;
-    left: 200vw;
+    left: 45vw;
     height: 210px;
     width: 400px;
 }
+
+
 
 /* ---------------------------------------- PARTIE GALERY ----------------------------------------------*/
 

@@ -7,6 +7,8 @@ progressBar = document.getElementById("progressBar"),
 menuTimeline = new TimelineMax({paused:true});
 
 
+// ####### Navbar 
+
 menuTimeline.to('#progressBar', 0.4, {
 height: "100vh",
 opacity: "1",
@@ -26,7 +28,6 @@ ease: Expo.easeInOut
 })
 
 menuTimeline.to('#ml2', 0.4, {
-// delay: "0.3",
 y: "0",
 opacity: "1",
 ease: Expo.easeInOut
@@ -34,7 +35,6 @@ ease: Expo.easeInOut
 
 
 menuTimeline.to('#ml3', 0.3, {
-// delay: "0.4",
 y: "0",
 opacity: "1",
 ease: Expo.easeInOut
@@ -49,29 +49,25 @@ ease: Expo.easeInOut
 })
 
 
-
-
-
-
 burgerMenu.onclick = function() {
 
 if (!burgerMenu.classList.contains("open")) {    
    
-menuModal.style.display = 'block';
-burgerMenu.classList.toggle('open');
-console.log('click');
-menuTimeline.play();
-// progressBar.style.height = 100 +"vh";
+    menuModal.style.display = 'block';
+    burgerMenu.classList.toggle('open');
+    console.log('click');
+    menuTimeline.play();
 
-} else {
 
-burgerMenu.classList.remove('open');
-menuTimeline.reverse();
+    } else {
+
+    burgerMenu.classList.remove('open');
+    menuTimeline.reverse();
+    }
 }
-}
 
 
-
+// ###### Galerie
 
 
 let draggableImg = document.getElementById('draggableImg');
@@ -79,7 +75,7 @@ let draggableImg2 = document.getElementById('draggableImg2');
 let draggableImg3 = document.getElementById('draggableImg3');
 
 function RandomPosition(max) {  
-return Math.floor(Math.random() * Math.floor(max));
+    return Math.floor(Math.random() * Math.floor(max));
 }
 
 
@@ -135,6 +131,7 @@ document.onmousemove = null;
 }
 }
 
+// ###### Animation on Scroll
 
 let width = document.body.clientWidth
 
@@ -149,7 +146,6 @@ console.log(window.scrollX)
 
 }
 
-// window.addEventListener("scroll", animation);
 
 
 window.onload = () => {

@@ -181,13 +181,10 @@ console.log(window.scrollX)
 
 }
 
-<<<<<<< HEAD
 let container = document.getElementById("container");
-=======
 // window.addEventListener("scroll", animation);
 
 let checkMarker = false;
->>>>>>> Marvin_branch
 
 window.onload = () => {
 

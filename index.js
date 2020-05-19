@@ -193,33 +193,34 @@ window.addEventListener("scroll", () => {
       let position = window.scrollX
       let largeur = document.documentElement.clientWidth
       let barre = position / scrollLargeur * largeur
-      let barrePourcentage =  ( barre * 100 ) / largeur
+      let ScrollingPagePourcent =  ( barre * 100 ) / largeur
 
-      if ( barrePourcentage > 6) {
-        document.getElementById("numPartOneBg").style.transform = "scale("  + Math.sqrt(barrePourcentage/6) + ")";
+      if ( ScrollingPagePourcent > 6) {
+        document.getElementById("numPartOneBg").style.transform = "scale("  + Math.sqrt(ScrollingPagePourcent/6) + ")";
+
         
       } else {
         document.getElementById("numPartOneBg").style.transform = "scale(" + 1 + ")";
       }
-      // console.log(1 + Math.sqrt(barrePourcentage/100))
-      
-     scrollTriggerOnes = (trigger , runAnimation) => {
+
+      console.log(ScrollingPagePourcent)
       
      
-      console.log(checkMarker);
-      if( barrePourcentage > trigger && checkMarker === false ) {
+
+      if( ScrollingPagePourcent > 7 && checkMarker === false ) {
 
             checkMarker = true;
             console.log(checkMarker);
-       
+            setTimeout(compteur, delta);
+            setTimeout(compteur2, delta2);
+            setTimeout(compteur3, delta3);
+            setTimeout(compteur4, delta4);
+            setTimeout(compteur5, delta5);
       }
-
-      }
-      scrollTriggerOnes()
-
-      console.log(barrePourcentage);
       
-      progressBar.style.height = barrePourcentage +"vh";
+      
+      progressBar.style.height = ScrollingPagePourcent +"vh";
+
 })
 }
 
@@ -277,6 +278,7 @@ function compteur3(){
 }
 
 
+
 function compteur4(){
   valeur_4.innerHTML = ++debutCompteur4;
   if( debutCompteur4 < nombre_4 ) { 
@@ -292,9 +294,4 @@ function compteur5(){
 }
 
 
-setTimeout(compteur, delta);
-setTimeout(compteur2, delta2);
-setTimeout(compteur3, delta3);
-setTimeout(compteur4, delta4);
-setTimeout(compteur5, delta5);
 

@@ -54,6 +54,7 @@ a {
     font-size: 90px;
     top: 40vh;
     left: 30vw;
+
 }
 
 .l-preloader , .r-preloader {
@@ -457,6 +458,7 @@ a {
     width: 50vw;
     background-image: url(assets/bg/steven-lasry-hFysDVSzi8M-unsplash.jpg);
     background-size: cover;
+    overflow: hidden;
 }
 
 .credits{
@@ -499,7 +501,7 @@ a {
 .cred-box-content{
     font-family: 'Bellota Text', cursive;
     color: white;
-    font-size: 17px;
+    font-size: 19px;
     padding: 20px 20px;
 }
 
@@ -613,6 +615,7 @@ a {
 .num-partTwo{
     display: flex;
     height: 100vh;
+    transition: transform 8s;
 
 }
 

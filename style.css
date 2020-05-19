@@ -338,6 +338,8 @@ a{
     position: absolute;
     background-position: center center;
     background-repeat: no-repeat;
+    transform: scale(2);
+    transition: transform 0.8s;
 }
 
 .num-title{

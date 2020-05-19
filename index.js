@@ -183,6 +183,7 @@ const animation = () => {
 
 // window.addEventListener("scroll", animation);
 
+let checkMarker = false;
 
 window.onload = () => {
   
@@ -197,25 +198,26 @@ window.onload = () => {
         document.getElementById("numPartOneBg").style.transform = "scale(" + Math.sqrt(barrePourcentage) + ")";
         
       } else {
-        document.getElementById("numPartOneBg").style.height = "scale(" + 0 + ")";
+        document.getElementById("numPartOneBg").style.transform = "scale(" + 1 + ")";
       }
-
+      // console.log(1 + Math.sqrt(barrePourcentage/100))
       
-     scrollTriggerOnes = (trigger) => {
+     scrollTriggerOnes = (trigger , runAnimation) => {
       
-      let checkMarker = false;
-      if( barrePourcentage === trigger && checkMarker === false ) {
+     
+      console.log(checkMarker);
+      if( barrePourcentage > trigger && checkMarker === false ) {
 
             checkMarker = true;
-            console.log("carre");
             console.log(checkMarker);
        
       }
 
       }
-      scrollTriggerOnes(7)
+      scrollTriggerOnes()
 
-      console.log(Math.sqrt(barrePourcentage))
+      console.log(barrePourcentage);
+      
       progressBar.style.height = barrePourcentage +"vh";
   })
 }

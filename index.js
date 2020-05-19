@@ -146,27 +146,27 @@ console.log(window.scrollX)
 
 }
 
-
+let container = document.getElementById("container");
 
 window.onload = () => {
 
 window.addEventListener("scroll", () => {
- let scrollLargeur = document.documentElement.scrollWidth - window.innerWidth
- let position = window.scrollX
- let largeur = document.documentElement.clientWidth
- let barre = position / scrollLargeur * largeur
- let barrePourcentage =  ( barre * 100 ) / largeur
+      let scrollLargeur = document.documentElement.scrollWidth - window.innerWidth
+          position = window.scrollX
+          largeur = document.documentElement.clientWidth
+          barre = position / scrollLargeur * largeur
+          barrePourcentage =  ( barre * 100 ) / largeur
 
- if ( barrePourcentage > 6) {
-   document.getElementById("numPartOneBg").style.transform = "scale(" + barrePourcentage/4 + ")";
-   
- } else {
-   document.getElementById("numPartOneBg").style.height = "scale(" + 0 + ")";
- }
- 
+          if ( barrePourcentage > 6) {
+            document.getElementById("numPartOneBg").style.transform = "scale(" + barrePourcentage/4 + ")";
+            
+          } else {
+            document.getElementById("numPartOneBg").style.height = "scale(" + 0 + ")";
+          }
+          
 
- console.log(barrePourcentage)
- progressBar.style.height = barrePourcentage +"vh";
+      console.log(barrePourcentage)
+      progressBar.style.height = barrePourcentage +"vh";
 })
 }
 

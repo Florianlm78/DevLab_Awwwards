@@ -207,7 +207,7 @@ window.addEventListener("scroll", () => {
       
      
       console.log(checkMarker);
-      if( barrePourcentage > 7 && checkMarker === false ) {
+      if( barrePourcentage > 5 && checkMarker === false ) {
 
             checkMarker = true;
             console.log(checkMarker);
@@ -217,6 +217,7 @@ window.addEventListener("scroll", () => {
             setTimeout(compteur4, delta4);
             setTimeout(compteur5, delta5);
       }
+
 
       }
       scrollTriggerOnes()

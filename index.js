@@ -4,6 +4,7 @@ let  menuModal = document.getElementById('menuModal'),
      burgerMenu = document.getElementById('burgerMenuBtn'),
      navbarMenu = document.getElementById('navbarMenu'),
      progressBar = document.getElementById("progressBar"),
+     
      menuTimeline = new TimelineMax({paused:true});
 
 
@@ -47,6 +48,18 @@ menuTimeline.to('#ml4', 0.2, {
   opacity: "1",
   ease: Expo.easeInOut
 })
+
+preloaderAnimation = new TimelineMax();
+
+preloaderAnimation.to('.l-preloader', 2, {
+  x: "-100vw",
+  ease: Expo.easeInOut
+} ,"end")
+
+preloaderAnimation.to('.r-preloader', 2, {
+  x: "100vw",
+  ease: Expo.easeInOut
+}, "end")
 
 
 

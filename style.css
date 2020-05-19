@@ -18,6 +18,33 @@ a{
     color: white;
 }
 
+
+
+/* ---------------------------------------- PARTIE PRELOADER ----------------------------------------------*/
+
+.preloader {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    z-index: 20;
+    overflow: hidden;
+}
+
+.l-preloader , .r-preloader {
+    width:  50vw;
+}
+
+.l-preloader {
+    background-color: red;
+    transform: translate(0vw);
+}
+
+.r-preloader {
+    background-color: green;
+    transform: translate(0vw);
+}
+
 /* ---------------------------------------- PARTIE HOME ----------------------------------------------*/
 
 .home{

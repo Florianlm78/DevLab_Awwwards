@@ -1,21 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Bellota+Text:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
 
+::-webkit-scrollbar{width:2px;height:2px;}
+::-webkit-scrollbar-button{width:2px;height:2px;}
+
 *{
     margin: 0;
     padding: 0;
+    overflow-y: unset;
     scroll-behavior: smooth;
    
 }
 
 body {
     width: 100%;
+    max-height: 100vh;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
 }
+
 
 /* ---------------------------------------- PARTIE HOME ----------------------------------------------*/
 
@@ -134,14 +140,12 @@ a{
     width: 100vw;
 }
 
+/* ########### SCROLL ########### */
 
-/* ########### SECTION HISTOIRE ########## */
+/* ########### SECTION HISTOIRE ########### */
 
 .history {
     display: inline;
-    position: absolute;
-    top: 0;
-    left: 300vw;
 }
 
 .s3-hist {
@@ -181,16 +185,11 @@ a{
     display: inline-flex;
     height: 100vh;
     width: 600%;
-    position: absolute;
-    left: 130vw;
-    top: 0;
 }
-
-
 
 .s3-date .sect-date {
     display: inline-flex;
-    
+    width: 100vw;
 }
 
 .s3-date .date{
@@ -198,6 +197,7 @@ a{
     background-color: #C89C12;
     height: 100vh;
     width: 220px;
+    z-index: 2;
 }
 
 .s3-date .date h2 {
@@ -217,7 +217,7 @@ a{
     position: relative;
 }
 
-.date-bg img {
+.date-bg img#bg-img-date  {
     object-fit: cover;
     position: relative;
     opacity: 50%;
@@ -238,7 +238,7 @@ a{
 }
 
 .date-bg .period h2 {
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     color: #02020278;;
     text-shadow: 1px 1px #8e8481;
 }
@@ -247,9 +247,256 @@ a{
     background-color: #730402;
 }
 
-
 #date-red .period h2 {
     color: #730402;
+}
+
+/* wrapper img */
+
+#wrapper {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transform: rotate(270deg) translateX(-100%);
+    transform-origin: top left;
+    position: absolute;
+    width: 100vh;
+    height: 90vw;
+}
+
+#wrp-img {
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+    white-space: nowrap;
+    padding-top: 7vh;
+}
+
+#wrapper .box-img {
+    width: 60vw;
+    height: 60vh;
+    display: inline-block;
+    position: relative;
+    margin: 10px;
+    margin-right: 10vw;
+}
+
+#wrapper .box-img img{
+    height: 60vh;
+    position: absolute;
+    box-shadow: 8px 9px 13px 0px #0000004a;
+}
+
+#blank {
+    width: 100vw !important;
+    margin-right: 0 !important;
+}
+
+/* 1861 */
+#OpC1 {
+    width: 344px !important;
+}
+
+#OpC2 {
+    width: 604px !important;
+}
+
+#OpC3 {
+    width: 687px !important;
+}
+
+#OpC4 {
+    width: 680px !important;
+}
+
+/* 1875 */
+#OpI1 {
+    width: 700px !important;
+}
+
+#OpI2 {
+    width: 363px !important;
+}
+
+#OpI3 {
+    width: 346px !important;
+}
+
+#OpI4 {
+    width: 680px !important;
+}
+
+#OpI5 {
+    width: 430px !important;
+}
+
+/* 1900 */
+#OpPS1 {
+    width: 693px !important;
+}
+
+#OpPS2 {
+    width: 692px !important;
+}
+
+#OpPS3 {
+    width: 636px !important;
+}
+
+#OpPS4 {
+    width: 480px !important;
+}
+
+/* 1940 */
+#OpO1 {
+    width: 825px !important;
+}
+
+#OpO2 {
+    width: 338px !important;
+}
+
+#OpO3 {
+    width: 850px !important;
+}
+
+/* 1950 */
+#OpT1 {
+    width: 364px !important;
+}
+
+#OpT2 {
+    width: 646px !important;
+}
+
+#OpT3 {
+    width: 705px !important;
+}
+
+#OpT4 {
+    width: 420px !important;
+}
+
+/* 2000 */
+#OpN1 {
+    width: 822px !important;
+}
+
+#OpN2 {
+    width: 694px !important;
+}
+
+#OpN3 {
+    width: 331px !important;
+}
+
+#OpN4 {
+    width: 350px !important;
+}
+
+/* ---------------------------------------- PARTIE CREDITS ----------------------------------------------*/
+
+.img-opera{
+    position: absolute;
+    top: 0;
+    left: 1225vw;
+    height: 100vh;
+    width: 400px;
+    background-image: url(assets/bg/97837792_3086810254709592_4225248131266117632_n.jpg);
+    background-size: cover;
+}
+
+.credits{
+    position: absolute;
+    top: 0;
+    left: 1256vw;
+    height: 100vh;
+    width: 100vw;
+    background-color: #0C0C0C;
+}
+
+
+.cred-title{
+    height: 100vh;
+    display:flex;
+    align-items:center;
+    cursor: default;
+}
+
+.cred-title-h{
+    font-family: 'Bellota Text', cursive;
+    font-size: 130px;
+    color: white;
+    writing-mode: vertical-lr;
+    transform:rotate(-180deg);
+    text-shadow: 0.1em -0.05em rgba(255, 255, 255, 0.3);
+}
+
+.cred-box{
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    height: 200px;
+    width: 350px;
+    background-color: #580302;
+    box-shadow: -10px -10px #AA151B;
+}
+
+.cred-box-content{
+    font-family: 'Bellota Text', cursive;
+    color: white;
+    font-size: 17px;
+    padding: 20px 20px;
+}
+
+.cred-link{
+    position: absolute;
+    bottom: 10%;
+    left: 25%;
+    width: 850px;
+    height: 300px;
+    font-family: 'Bellota Text', cursive;
+    color: white;
+}
+
+.cred-link-title{
+    text-align: center;
+    font-size: 35px;
+}
+
+.cred-link-dev{
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10%;
+}
+
+.cred-link-href{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
+
+.cred-link-name{
+    font-size: 25px;
+}
+
+
+.cred-link-trait-one{
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    height: 150px;
+    width: 2px;
+    background-color: #C5171B;
+}
+
+.cred-link-trait-two{
+    position: absolute;
+    top: 30%;
+    left: 67%;
+    height: 150px;
+    width: 2px;
+    background-color: #C5171B;
 }
 
 
@@ -425,114 +672,6 @@ a{
     width: 400px;
 }
 
-/* ---------------------------------------- PARTIE CREDITS ----------------------------------------------*/
-
-.img-opera{
-    position: absolute;
-    top: 0;
-    left: 1225vw;
-    height: 100vh;
-    width: 400px;
-    background-image: url(assets/bg/97837792_3086810254709592_4225248131266117632_n.jpg);
-    background-size: cover;
-}
-
-.credits{
-    position: absolute;
-    top: 0;
-    left: 1256vw;
-    height: 100vh;
-    width: 100vw;
-    background-color: #0C0C0C;
-}
-
-
-.cred-title{
-    height: 100vh;
-    display:flex;
-    align-items:center;
-    cursor: default;
-}
-
-.cred-title-h{
-    font-family: 'Bellota Text', cursive;
-    font-size: 130px;
-    color: white;
-    writing-mode: vertical-lr;
-    transform:rotate(-180deg);
-    text-shadow: 0.1em -0.05em rgba(255, 255, 255, 0.3);
-}
-
-.cred-box{
-    position: absolute;
-    top: 10%;
-    left: 45%;
-    height: 200px;
-    width: 350px;
-    background-color: #580302;
-    box-shadow: -10px -10px #AA151B;
-}
-
-.cred-box-content{
-    font-family: 'Bellota Text', cursive;
-    color: white;
-    font-size: 17px;
-    padding: 20px 20px;
-}
-
-.cred-link{
-    position: absolute;
-    bottom: 10%;
-    left: 25%;
-    width: 850px;
-    height: 300px;
-    font-family: 'Bellota Text', cursive;
-    color: white;
-}
-
-.cred-link-title{
-    text-align: center;
-    font-size: 35px;
-}
-
-.cred-link-dev{
-    z-index: 2;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 10%;
-}
-
-.cred-link-href{
-    margin-top: 15px;
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 20px;
-}
-
-.cred-link-name{
-    font-size: 25px;
-}
-
-
-.cred-link-trait-one{
-    position: absolute;
-    top: 30%;
-    left: 35%;
-    height: 150px;
-    width: 2px;
-    background-color: #C5171B;
-}
-
-.cred-link-trait-two{
-    position: absolute;
-    top: 30%;
-    left: 67%;
-    height: 150px;
-    width: 2px;
-    background-color: #C5171B;
-}
-
-
 /* ---------------------------------------- PARTIE GALERY ----------------------------------------------*/
 
 .galery {
@@ -568,4 +707,3 @@ a{
     cursor: move;
     z-index: 10;
   }
-

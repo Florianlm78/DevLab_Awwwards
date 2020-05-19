@@ -43,28 +43,47 @@ menuTimeline.to('#ml3', 0.3, {
 
 
 menuTimeline.to('#ml4', 0.2, {
-  // delay: "0.6",
   y: "0",
   opacity: "1",
   ease: Expo.easeInOut
 })
 
-preloaderAnimation = new TimelineMax();
+preloaderAnimation = new TimelineMax({paused:true});
 
-preloaderAnimation.to('.l-preloader', 2, {
+
+preloaderAnimation.to('#preloaderTxt', 1, {
+  y: "-10px",
+  opacity: "0",
+  ease: Expo.easeInOut
+},"end")
+
+preloaderAnimation.to('.l-preloader', 2.3, {
   x: "-100vw",
   ease: Expo.easeInOut
 } ,"end")
 
-preloaderAnimation.to('.r-preloader', 2, {
+preloaderAnimation.to('.r-preloader', 2.3, {
   x: "100vw",
   ease: Expo.easeInOut
 }, "end")
 
+preloaderAnimation.to('.home-bg', 1.5, {
+  opacity: "1",
+  ease: Expo.easeInOut
+},"end")
 
+preloaderAnimation.to('#preloader', 2, {
+  display: "none"
+})
 
+try {
+  window.addEventListener("load", () => {
+      preloaderAnimation.play()
+  })
+  } catch {
+    console.log("pas de loader");
+  }
 
-    
 
 burgerMenu.onclick = function() {
 

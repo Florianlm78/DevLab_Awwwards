@@ -4,13 +4,15 @@
 *{
     margin: 0;
     padding: 0;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     scroll-behavior: smooth;
+    
    
 }
 
 body {
     width: 100%;
+    
 }
 
 a{
@@ -26,9 +28,31 @@ a{
     width: 100vw;
     height: 100vh;
     position: fixed;
-    display: flex;
     z-index: 20;
     overflow: hidden;
+    
+}
+
+
+.preloader-bg {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.preloader-txt {
+    position: absolute;
+    color: #FFFFFF;
+    z-index: 99;
+    /* background-color: #580302; */
+    font-family: 'Amiri';
+    color: #C89C12;
+    font-weight: 900;
+    font-size: 90px;
+    top: 47vh;
+    left: 37vw;
+    
+    
 }
 
 .l-preloader , .r-preloader {
@@ -36,12 +60,12 @@ a{
 }
 
 .l-preloader {
-    background-color: red;
+    background-color:#580302;
     transform: translate(0vw);
 }
 
 .r-preloader {
-    background-color: green;
+    background-color: #580302;
     transform: translate(0vw);
 }
 
@@ -53,7 +77,14 @@ a{
     left: 0;
     width: 100vw;
     height: 100vh;
+    background-color: #000;
+}
+
+.home-bg {
     background-image: url(assets/bg/homepage-bg.JPG);
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
     background-size: cover;
 }
 

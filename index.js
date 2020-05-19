@@ -164,6 +164,7 @@ window.addEventListener("scroll", () => {
    document.getElementById("numPartOneBg").style.height = "scale(" + 0 + ")";
  }
 
+
  console.log(barrePourcentage)
  progressBar.style.height = barrePourcentage +"vh";
 })

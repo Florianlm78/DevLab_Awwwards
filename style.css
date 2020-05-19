@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bellota+Text:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
 
-::-webkit-scrollbar{width:2px;height:2px;}
-::-webkit-scrollbar-button{width:2px;height:2px;}
+/*::-webkit-scrollbar{width:2px;height:2px;}
+::-webkit-scrollbar-button{width:2px;height:2px;}*/
 
 *{
     margin: 0;
@@ -178,6 +178,7 @@ a {
 }
 
 .s3-hist h2 {
+    padding-left: 5vw;
     font: 250px/200px Bellota Text;
     text-align: center;
     font-weight: 100;
@@ -417,9 +418,9 @@ a {
 .img-opera{
     position: absolute;
     top: 0;
-    left: 1225vw;
+    left: 1145vw;
     height: 100vh;
-    width: 400px;
+    width: 20vw;
     background-image: url(assets/bg/97837792_3086810254709592_4225248131266117632_n.jpg);
     background-size: cover;
 }
@@ -427,7 +428,7 @@ a {
 .credits{
     position: absolute;
     top: 0;
-    left: 1256vw;
+    left: 1165vw;
     height: 100vh;
     width: 100vw;
     background-color: #0C0C0C;
@@ -621,7 +622,7 @@ a {
     top: 0;
     left: 202vw;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     background-image: url(assets/gallery/oiuepp7bbx9vnleozxtv.jpg);
     background-size: cover;
 }
@@ -630,6 +631,7 @@ a {
 /* PARTIE TEXTE */
 
 .num-visitor{
+    z-index: 5;
     position: absolute;
     font-family: 'Bellota Text', cursive;
     line-height: 70px;
@@ -643,6 +645,7 @@ a {
 }
 
 .num-employees{
+    z-index: 5;
     position: absolute;
     font-family: 'Bellota Text', cursive;
     line-height: 70px;
@@ -704,7 +707,7 @@ a {
 .galery {
     position: absolute;
     top:0;
-    left: 1125vw;
+    left: 1045vw;
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(115,4,2,1) 0%, rgba(82,3,2,1) 100%);
     width: 100vw;
     height: 100vh;

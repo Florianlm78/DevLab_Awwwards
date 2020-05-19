@@ -194,7 +194,7 @@ window.onload = () => {
       let barrePourcentage =  ( barre * 100 ) / largeur
 
       if ( barrePourcentage > 6) {
-        document.getElementById("numPartOneBg").style.transform = "scale(" + barrePourcentage/4 + ")";
+        document.getElementById("numPartOneBg").style.transform = "scale(" + Math.sqrt(barrePourcentage) + ")";
         
       } else {
         document.getElementById("numPartOneBg").style.height = "scale(" + 0 + ")";
@@ -215,7 +215,7 @@ window.onload = () => {
       }
       scrollTriggerOnes(7)
 
-      console.log(barrePourcentage)
+      console.log(Math.sqrt(barrePourcentage))
       progressBar.style.height = barrePourcentage +"vh";
   })
 }

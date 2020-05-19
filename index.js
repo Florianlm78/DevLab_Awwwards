@@ -168,6 +168,21 @@ window.onload = () => {
         document.getElementById("numPartOneBg").style.height = "scale(" + 0 + ")";
       }
 
+      
+     scrollTriggerOnes = (trigger) => {
+      
+      let checkMarker = false;
+      if( barrePourcentage === trigger && checkMarker === false ) {
+
+            checkMarker = true;
+            console.log("carre");
+            console.log(checkMarker);
+       
+      }
+
+      }
+      scrollTriggerOnes(7)
+
       console.log(barrePourcentage)
       progressBar.style.height = barrePourcentage +"vh";
   })

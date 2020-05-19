@@ -1,9 +1,17 @@
 
 
-var  menuModal = document.getElementById('menuModal'),
-       burgerMenu = document.getElementById('burgerMenuBtn'),
-       navbarMenu = document.getElementById('navbarMenu'),
-       menuTimeline = new TimelineMax({paused:true});
+let  menuModal = document.getElementById('menuModal'),
+     burgerMenu = document.getElementById('burgerMenuBtn'),
+     navbarMenu = document.getElementById('navbarMenu'),
+     progressBar = document.getElementById("progressBar"),
+     menuTimeline = new TimelineMax({paused:true});
+
+
+menuTimeline.to('#progressBar', 0.4, {
+  height: "100vh",
+  opacity: "1",
+  ease: Expo.easeInOut
+})
 
 menuTimeline.to('.menu', 0.5, {
   width: "100vw",        
@@ -41,6 +49,8 @@ menuTimeline.to('#ml4', 0.2, {
 })
 
 
+
+
     
 
 burgerMenu.onclick = function() {
@@ -51,9 +61,10 @@ burgerMenu.onclick = function() {
     burgerMenu.classList.toggle('open');
     console.log('click');
     menuTimeline.play();
+    // progressBar.style.height = 100 +"vh";
 
 } else {
-
+    
     burgerMenu.classList.remove('open');
     menuTimeline.reverse();
 }
@@ -158,7 +169,7 @@ window.onload = () => {
       }
 
       console.log(barrePourcentage)
-      document.getElementById("progressBar").style.height = barrePourcentage +"vh";
+      progressBar.style.height = barrePourcentage +"vh";
   })
 }
 

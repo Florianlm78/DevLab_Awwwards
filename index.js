@@ -185,6 +185,7 @@ let container = document.getElementById("container");
 // window.addEventListener("scroll", animation);
 
 let checkMarker = false;
+    checkMarker3 = false; 
 
 window.onload = () => {
 
@@ -215,7 +216,11 @@ window.addEventListener("scroll", () => {
             setTimeout(compteur4, delta4);
             setTimeout(compteur5, delta5);
       }
-      
+
+      // if( ScrollingPagePourcent > 90 ) {
+
+      //   // document.getElementById("credits").style.left =  ScrollingPagePourcent + "px)";
+      // }
       
       progressBar.style.height = ScrollingPagePourcent +"vh";
 })

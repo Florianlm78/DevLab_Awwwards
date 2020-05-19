@@ -77,7 +77,7 @@ preloaderAnimation.to('#preloader', 2, {
 
 try {
   window.addEventListener("load", () => {
-      preloaderAnimation.play()
+    preloaderAnimation.play()
   })
   } catch {
     console.log("pas de loader");
@@ -198,10 +198,12 @@ window.addEventListener("scroll", () => {
 
       if ( ScrollingPagePourcent > 6) {
         document.getElementById("numPartOneBg").style.transform = "scale("  + Math.sqrt(ScrollingPagePourcent/6) + ")";
+
         
       } else {
         document.getElementById("numPartOneBg").style.transform = "scale(" + 1 + ")";
       }
+
       console.log(ScrollingPagePourcent)
       
      
@@ -223,6 +225,7 @@ window.addEventListener("scroll", () => {
       // }
       
       progressBar.style.height = ScrollingPagePourcent +"vh";
+
 })
 }
 
@@ -280,6 +283,7 @@ function compteur3(){
 }
 
 
+
 function compteur4(){
   valeur_4.innerHTML = ++debutCompteur4;
   if( debutCompteur4 < nombre_4 ) { 
@@ -293,5 +297,6 @@ function compteur5(){
     setTimeout(compteur5, delta5);
  }
 }
+
 
 

@@ -52,10 +52,9 @@ a {
     color: #C89C12;
     font-weight: 900;
     font-size: 90px;
-    top: 47vh;
-    left: 37vw;
-    
-    
+    top: 40vh;
+    left: 30vw;
+
 }
 
 .l-preloader , .r-preloader {
@@ -152,7 +151,6 @@ a {
 }
 
 .menu-li {
-    color: #C89C12;
     font-size: 8rem;
     list-style: none;
     text-transform: uppercase;
@@ -162,6 +160,14 @@ a {
     opacity: 0;
 }
 
+.menu a {
+    color: #C89C12;
+}
+
+.menu a:hover {
+    color: #C89C12;
+    text-shadow: -6px -5px black;
+}
 
 .progress-bar {
     background-color:  #C89C12;;
@@ -338,8 +344,19 @@ a {
 
 #wrapper .box-img img{
     height: 60vh;
-    position: absolute;
     box-shadow: 8px 9px 13px 0px #0000004a;
+}
+
+#wrapper .box-img .cap {
+    float: left;
+    text-align: end;
+    width: 630px;
+    height: 5vh;
+}
+
+#wrapper .box-img h3 {
+    font-family: Bellota Text;
+    color: #695743;
 }
 
 #blank {
@@ -504,6 +521,7 @@ a {
     color: white;
     font-size: 19px;
     padding: 20px 20px;
+    text-align: justify;
 }
 
 .cred-link{
@@ -558,6 +576,28 @@ a {
     background-color: #C5171B;
 }
 
+.cred-link .link{
+    position: relative;
+}
+.cred-link .link:after { 
+    content: '';
+    position: absolute;
+    width: 0; 
+    height: 1px;
+    display: block;
+    margin-top: 1px;
+    right: 0;
+    background: #fff;
+    transition: width .2s ease;
+    -webkit-transition: width .2s ease;
+}
+
+.cred-link .link:hover:after{
+    width: 100%;
+    left: 0;
+    background: #fff;
+}
+  
 
 /* ---------------------------------------- PARTIE CHIFFRES ----------------------------------------------*/
 

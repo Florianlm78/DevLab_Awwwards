@@ -75,6 +75,17 @@ preloaderAnimation.to('#preloader', 2, {
   display: "none"
 })
 
+bgAnimation = new TimelineMax({paused:true});
+bgAnimation2 = new TimelineMax();
+
+bgAnimation.to('#imgOpera', 1, {
+  opacity: "1"
+},"end")
+
+bgAnimation2.to('.hist-bg2', 3, {
+  opacity: "0"
+},"end")
+
 try {
   window.addEventListener("load", () => {
     preloaderAnimation.play()
@@ -204,6 +215,22 @@ window.addEventListener("scroll", () => {
         document.getElementById("numPartOneBg").style.transform = "scale(" + 1 + ")";
       }
 
+      if( ScrollingPagePourcent > 25 ) {
+
+        bgAnimation2.play()
+       } else {
+        bgAnimation2.reverse()
+       }
+
+
+
+       if( ScrollingPagePourcent > 90 ) {
+
+        bgAnimation.play()
+       } else {
+        bgAnimation.reverse()
+       }
+
       console.log(ScrollingPagePourcent)
       
      
@@ -218,11 +245,6 @@ window.addEventListener("scroll", () => {
             setTimeout(compteur4, delta4);
             setTimeout(compteur5, delta5);
       }
-
-      // if( ScrollingPagePourcent > 90 ) {
-
-      //   // document.getElementById("credits").style.left =  ScrollingPagePourcent + "px)";
-      // }
       
       progressBar.style.height = ScrollingPagePourcent +"vh";
 

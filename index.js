@@ -51,7 +51,7 @@ preloaderAnimation = new TimelineMax({paused:true});
 
 
 preloaderAnimation.to('#preloaderTxt', 1, {
-  y: "-10px",
+  y: "-90px",
   opacity: "0",
   ease: Expo.easeInOut
 },"end")
@@ -76,7 +76,8 @@ preloaderAnimation.to('#preloader', 2, {
 })
 
 bgAnimation = new TimelineMax({paused:true});
-bgAnimation2 = new TimelineMax();
+bgAnimation2 = new TimelineMax({paused:true});
+
 
 bgAnimation.to('#imgOpera', 1, {
   opacity: "1"
@@ -85,6 +86,7 @@ bgAnimation.to('#imgOpera', 1, {
 bgAnimation2.to('.hist-bg2', 3, {
   opacity: "0"
 },"end")
+
 
 try {
   window.addEventListener("load", () => {
@@ -197,6 +199,7 @@ let container = document.getElementById("container");
 
 let checkMarker = false;
     checkMarker3 = false; 
+    checkMarker4 = false; 
 
 window.onload = () => {
 

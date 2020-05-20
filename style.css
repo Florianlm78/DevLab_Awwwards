@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Bellota+Text:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
 
-/*::-webkit-scrollbar{width:2px;height:2px;}
-::-webkit-scrollbar-button{width:2px;height:2px;}*/
+::-webkit-scrollbar{width:2px;height:2px;}
+::-webkit-scrollbar-button{width:2px;height:2px;}
 
 *{
     margin: 0;
     padding: 0;
     /* overflow-y: hidden; */
-    /* scroll-behavior: smooth; */
+    scroll-behavior: smooth;
     
    
 }
